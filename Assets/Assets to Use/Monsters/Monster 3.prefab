@@ -99,13 +99,8 @@ MonoBehaviour:
   unitName: Skeleton Executioner
   health: 100
   resource: 0
-<<<<<<< Updated upstream
   baseDamage: 15
   baseAttacksPerSecond: 2
-=======
-  baseDamage: 10
-  baseAttacksPerSecond: 1
->>>>>>> Stashed changes
   baseMaxHealth: 250
   baseMaxResource: 100
   baseMovementSpeed: 0.6
