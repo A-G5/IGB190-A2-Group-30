@@ -10,24 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Gold Ring
+  m_Name: Armor
   m_EditorClassIdentifier: 
-  itemName: Gold Ring
-  itemDescription: 'A plain gold ring
-
-'
+  itemName: Armor
+  itemDescription: 
   itemTag: 
   itemFlavourText: 
   classRequirement: 
-  itemIcon: {fileID: 21300000, guid: 70429bf7d5f2bf341be1c31492f4ecd0, type: 3}
-  itemType: 0
+  itemIcon: {fileID: 21300000, guid: 5ee626c5c13289943ba7685e2a78f431, type: 3}
+  itemType: 3
   itemRarity: 0
-  itemCost: 500
+  itemCost: 0
   randomStatCount: 0
   guaranteedStats:
-  - stat: 0
-    minimum: 6
-    maximum: 9
+  - stat: 1
+    minimum: 14
+    maximum: 16
+    isPercent: 0
+  - stat: 4
+    minimum: 22
+    maximum: 24
     isPercent: 0
   randomisableStats: []
   minimumDropLevel: 0
@@ -37,23 +39,17 @@ MonoBehaviour:
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1867767527
+      scriptUID: 1031694456
       hasWait: 0
       eventNodes:
-      - rid: 248813236419559487
+      - rid: 6294958422224273422
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 708064494
+      scriptUID: 1413498439
       hasWait: 0
       eventNodes:
-      - rid: 248813236419559488
-      conditionNodes: []
-      actionNodes: []
-    - scriptName: Main
-      scriptUID: 1630570770
-      hasWait: 0
-      eventNodes: []
+      - rid: 6294958422224273423
       conditionNodes: []
       actionNodes: []
   references:
@@ -61,7 +57,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 248813236419559487
+    - rid: 6294958422224273422
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -82,7 +78,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 248813236419559488
+    - rid: 6294958422224273423
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
