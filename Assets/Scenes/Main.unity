@@ -3236,6 +3236,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2723096954302082401, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
+      propertyPath: empoweredMonsters
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723096954302082401, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
+      propertyPath: maximumSpawnLevel
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4157343042942318865, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_Name
       value: Room 4
@@ -9300,7 +9308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &623941939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14972,7 +14980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1043651113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14999,7 +15007,7 @@ MonoBehaviour:
   baseArmor: 0
   baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 20
+  baseHealthRegen: 10
   baseResourceRegen: 0
   baseAttackRange: 2.5
   abilities:
@@ -28726,11 +28734,11 @@ MonoBehaviour:
   baseAttacksPerSecond: 1.8
   baseMaxHealth: 200
   baseMaxResource: 100
-  baseMovementSpeed: 3.5
+  baseMovementSpeed: 4
   baseArmor: 0
   baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 20
+  baseHealthRegen: 5
   baseResourceRegen: 2
   baseAttackRange: 2
   abilities:
@@ -32199,6 +32207,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2723096954045919853, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
+      propertyPath: maximumSpawnLevel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723096954302082401, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
+      propertyPath: maximumSpawnLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4124517350831407445, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -33387,6 +33403,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1883707019183669310, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723096954045919853, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
+      propertyPath: empoweredMonsters
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2723096954302082401, guid: 3660627c257c107448bbab1f879c40e8, type: 3}

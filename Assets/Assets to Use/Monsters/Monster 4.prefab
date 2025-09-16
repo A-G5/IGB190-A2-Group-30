@@ -99,8 +99,13 @@ MonoBehaviour:
   unitName: Skeleton Guard
   health: 100
   resource: 0
+<<<<<<< Updated upstream
   baseDamage: 15
   baseAttacksPerSecond: 2
+=======
+  baseDamage: 10
+  baseAttacksPerSecond: 1
+>>>>>>> Stashed changes
   baseMaxHealth: 180
   baseMaxResource: 100
   baseMovementSpeed: 1.2
