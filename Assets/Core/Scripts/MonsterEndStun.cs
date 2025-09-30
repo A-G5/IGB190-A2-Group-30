@@ -10,7 +10,6 @@ public class MonsterEndStun : MonoBehaviour
         if (monster != null)
         {
             monster.GetComponent<Monster>().isStunned = false;
-            Debug.Log("Stop stunned!");
         }
         
     }
