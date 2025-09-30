@@ -99,13 +99,8 @@ MonoBehaviour:
   unitName: Skeleton Executioner
   health: 100
   resource: 0
-<<<<<<< Updated upstream
   baseDamage: 15
   baseAttacksPerSecond: 2
-=======
-  baseDamage: 10
-  baseAttacksPerSecond: 1
->>>>>>> Stashed changes
   baseMaxHealth: 250
   baseMaxResource: 100
   baseMovementSpeed: 0.6
@@ -129,6 +124,7 @@ MonoBehaviour:
   experienceModifier: 1
   corpseDuration: 5
   monsterLabel: 
+  isStunned: 0
   isEmpowered: 0
   healthBarType: 0
   uiSize: 1
@@ -5550,13 +5546,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 159544, guid: 77ad0facb2a27504ab8edf68c35a1346, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2574480430223141544}
   m_SourcePrefab: {fileID: 100100000, guid: 77ad0facb2a27504ab8edf68c35a1346, type: 3}
 --- !u!4 &2458428688106599953 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 463548, guid: 77ad0facb2a27504ab8edf68c35a1346, type: 3}
   m_PrefabInstance: {fileID: 2458428688106923181}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2458428688106802069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 159544, guid: 77ad0facb2a27504ab8edf68c35a1346, type: 3}
+  m_PrefabInstance: {fileID: 2458428688106923181}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2574480430223141544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2458428688106802069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f38510b7d50074fb1698e2a1449772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 0}
 --- !u!137 &2458428688118554331 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 13744758, guid: 77ad0facb2a27504ab8edf68c35a1346, type: 3}

@@ -23,6 +23,7 @@ public class Monster : Unit
     public float experienceModifier = 1.0f;
     public float corpseDuration = 5.0f;
     public string monsterLabel;
+    [HideInInspector] public bool isStunned;
     [HideInInspector] public bool isEmpowered = false;
 
     [Header("Health Bar Properties")]
@@ -136,7 +137,13 @@ public class Monster : Unit
     /// </summary>
     private void HandleMovement()
     {
-        if (target == null && CanMove() && GetFaction() == Faction.Player)
+        if (isStunned == true)
+        {
+            Debug.Log("I am stunned!");
+            StopMoving();
+        }
+
+        else if (target == null && CanMove() && GetFaction() == Faction.Player)
         {
             agentNavigation.SetDestination(GameManager.player.transform.position);
         }
@@ -209,6 +216,9 @@ public class Monster : Unit
             Color color = isCritical ? CritDamageTextColor : HitDamageTextColor;
             float scale = isCritical ? CriticalDamageNumberScaleMod : 1.0f;
             StatusMessageUI.Spawn(spawnPos, Mathf.Max(0, Mathf.Round(amount)).ToString(), color, scale);
+
+            isStunned = true;
+            animator.Play("Stun");
         }
     }
 
