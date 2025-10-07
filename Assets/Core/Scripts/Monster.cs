@@ -139,7 +139,6 @@ public class Monster : Unit
     {
         if (isStunned == true)
         {
-            Debug.Log("I am stunned!");
             StopMoving();
         }
 
@@ -192,13 +191,16 @@ public class Monster : Unit
     /// </summary>
     protected override void TryToCastAbilities()
     {
-        base.TryToCastAbilities();
-        foreach (var ability in abilities)
+        if (isStunned == false)
         {
-            if (ability != null)
+            base.TryToCastAbilities();
+            foreach (var ability in abilities)
             {
-                CastAbility(ability, target, targetPosition);
-            }
+                if (ability != null)
+                {
+                    CastAbility(ability, target, targetPosition);
+                }
+            } 
         }
     }
 

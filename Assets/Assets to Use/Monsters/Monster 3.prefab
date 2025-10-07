@@ -5573,7 +5573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98f38510b7d50074fb1698e2a1449772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster: {fileID: 0}
+  monster: {fileID: 330290348599631566}
 --- !u!137 &2458428688118554331 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 13744758, guid: 77ad0facb2a27504ab8edf68c35a1346, type: 3}
