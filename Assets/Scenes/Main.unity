@@ -31549,8 +31549,8 @@ MonoBehaviour:
     increasedHealthPerPlayerLevel: 0.25
     increasedDamagePerPlayerLevel: 0.25
   _healthGlobeValues:
-    baseHealthGlobeChance: 0
-    reducedChancePerExistingGlobe: 0
+    baseHealthGlobeChance: 0.15
+    reducedChancePerExistingGlobe: 0.05
     spawnRadius: 6
     lifetime: 5
     healthGlobeHealthRestore: 50
