@@ -10,22 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Amulet
+  m_Name: Silver Ring
   m_EditorClassIdentifier: 
-  itemName: Amulet
-  itemDescription: 
+  itemName: Silver Ring
+  itemDescription: 'A plain silver ring
+
+'
   itemTag: 
   itemFlavourText: 
   classRequirement: 
-  itemIcon: {fileID: 21300000, guid: 371f7aca98ca60744bebba125976b879, type: 3}
-  itemType: 1
-  itemRarity: 2
-  itemCost: 1500
+  itemIcon: {fileID: 21300000, guid: a8bc19c7daadb6044b071d234a1d62a3, type: 3}
+  itemType: 0
+  itemRarity: 0
+  itemCost: 500
   randomStatCount: 0
   guaranteedStats:
-  - stat: 10
-    minimum: 0.17
-    maximum: 0.21
+  - stat: 0
+    minimum: 6
+    maximum: 9
     isPercent: 0
   randomisableStats: []
   minimumDropLevel: 0
@@ -35,17 +37,23 @@ MonoBehaviour:
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 977605114
+      scriptUID: 1867767527
       hasWait: 0
       eventNodes:
-      - rid: 6294958422224273416
+      - rid: 248813236419559487
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 273407296
+      scriptUID: 708064494
       hasWait: 0
       eventNodes:
-      - rid: 6294958422224273417
+      - rid: 248813236419559488
+      conditionNodes: []
+      actionNodes: []
+    - scriptName: Main
+      scriptUID: 1630570770
+      hasWait: 0
+      eventNodes: []
       conditionNodes: []
       actionNodes: []
   references:
@@ -53,7 +61,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 6294958422224273416
+    - rid: 248813236419559487
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -74,7 +82,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 6294958422224273417
+    - rid: 248813236419559488
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
