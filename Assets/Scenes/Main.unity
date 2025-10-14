@@ -9540,7 +9540,7 @@ MonoBehaviour:
   baseResourceRegen: 8
   baseAttackRange: 2
   abilities:
-  - {fileID: 11400000, guid: c36b22ac0b33e2a40ab38559a27063de, type: 2}
+  - {fileID: 11400000, guid: 63a782021e0dcd343a62943c5471ba6c, type: 2}
   - {fileID: 11400000, guid: 439a83325212fdd46bf8dc30aca6abfa, type: 2}
   - {fileID: 11400000, guid: dcf06f73b05311c469df4ff76bc88947, type: 2}
   - {fileID: 11400000, guid: 35711275af7bab445a6a72edb86baf44, type: 2}
@@ -31524,7 +31524,7 @@ MonoBehaviour:
     showGameUI: 1
     showShopWhenCharacterWindowOpens: 1
     showUnitOutlines: 0
-    keybindings: 4301000044010000710000007700000065000000720000002000000030010000
+    keybindings: 4401000031000000320000003300000034000000350000002000000030010000
   _monsterValues:
     baseGoldDropAmountMinimum: 10
     baseGoldDropAmountMaximum: 20
