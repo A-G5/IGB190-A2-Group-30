@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Weapon 3
   m_EditorClassIdentifier: 
   itemName: Weapon
-  itemDescription: A trusty axe
+  itemDescription: 
   itemTag: 
   itemFlavourText: 
   classRequirement: 
