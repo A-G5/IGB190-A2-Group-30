@@ -17,7 +17,7 @@ MonoBehaviour:
   abilityName: Axe Swing
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: 9fd6e45ede516b24f9d2f3548cedba35, type: 3}
-  targetMode: 1
+  targetMode: 3
   abilityDescription: Spinning melee attack with an axe. Used by enemies to use a
     spin attack to deal 160% damage to the player.
   abilityAnimation: Custom1
@@ -153,7 +153,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 9042034073567350921, guid: 0ec88c5cdcedce5459ee8ba11ddd5cf4, type: 3}
+        value: {fileID: 4450316829855746748, guid: b72499fbc8394864290840a755465e3c, type: 3}
     - rid: 2029877064550580237
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
