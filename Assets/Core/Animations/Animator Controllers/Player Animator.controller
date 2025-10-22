@@ -858,7 +858,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: df8d65ae60bb58e4184e5d651b1a8cec, type: 3}
+  m_Motion: {fileID: 7400000, guid: a513b162e06bcd84e88765d4e7092b07, type: 2}
   m_Tag: 
   m_SpeedParameter: AbilityCastSpeed
   m_MirrorParameter: 
@@ -1321,7 +1321,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Custom1
-  m_Speed: 1.667
+  m_Speed: 1.8
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -326833418446270442}
@@ -1335,12 +1335,12 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: df8d65ae60bb58e4184e5d651b1a8cec, type: 3}
+  m_Motion: {fileID: 7400000, guid: fb009061520a02d4c8b6508d51bfb8e0, type: 2}
   m_Tag: 
   m_SpeedParameter: AbilityCastSpeed
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-  m_TimeParameter: 
+  m_TimeParameter: Speed
 --- !u!1102 &3633671787438162343
 AnimatorState:
   serializedVersion: 6
@@ -1922,7 +1922,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.85
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1

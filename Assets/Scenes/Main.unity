@@ -9505,7 +9505,7 @@ GameObject:
   - component: {fileID: 623941939}
   m_Layer: 0
   m_Name: Player (Sorcerer)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15238,7 +15238,7 @@ GameObject:
   - component: {fileID: 1043651113}
   m_Layer: 0
   m_Name: Player (Barbarian)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29026,7 +29026,7 @@ GameObject:
   - component: {fileID: 1806430104}
   m_Layer: 0
   m_Name: Player (Ranger)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
