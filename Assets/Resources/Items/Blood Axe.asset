@@ -1,0 +1,267 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
+  m_Name: Blood Axe
+  m_EditorClassIdentifier: 
+  itemName: Blood Axe
+  itemDescription: 'Life Steal: Heal slightly for every damage dealt'
+  itemTag: 
+  itemFlavourText: 
+  classRequirement: 
+  itemIcon: {fileID: 21300000, guid: efc013e3db3ea144c8795366d761c52d, type: 3}
+  itemType: 2
+  itemRarity: 2
+  itemCost: 2000
+  randomStatCount: 0
+  guaranteedStats:
+  - stat: 0
+    minimum: 45
+    maximum: 45
+    isPercent: 0
+  - stat: 11
+    minimum: 0.18
+    maximum: 0.18
+    isPercent: 0
+  - stat: 7
+    minimum: 0.16
+    maximum: 0.16
+    isPercent: 1
+  randomisableStats: []
+  minimumDropLevel: 0
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
+  template: {fileID: 0}
+  engine:
+    scripts:
+    - scriptName: Item Equipped
+      scriptUID: 2105730099
+      hasWait: 0
+      eventNodes:
+      - rid: 7039550055637844290
+      conditionNodes:
+      - rid: 7039550055637844359
+      actionNodes:
+      - rid: 7039550055637844465
+    - scriptName: Item Unequipped
+      scriptUID: 680091412
+      hasWait: 0
+      eventNodes:
+      - rid: 2474105834053304418
+      conditionNodes: []
+      actionNodes: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 2474105834053304418
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptUnloaded
+        functionDescription: Time/On script unloaded
+        functionDynamicDescription: On script unloaded
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 7039550055637844290
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitIsKilled
+        functionDescription: Unit/Unit is killed
+        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
+          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
+          Ability</color>, <color=yellow>Is Critical</color>)'
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Killed Unit
+        - Killing Unit
+        - Killing Ability
+        - Is Critical
+    - rid: 7039550055637844359
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitComparison
+        functionDescription: Comparisons/Unit Comparison
+        functionDynamicDescription: $ $ $
+        functionEvaluators:
+        - rid: 7039550055637844360
+        - rid: 7039550055637844361
+        - rid: 7039550055637844362
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 7039550055637844360
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844359
+        parentNodeID: 0
+        indent: 0
+        presetName: Killing Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 7039550055637844361
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844359
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Equal To
+        options:
+        - Equal To
+        - Not Equal To
+    - rid: 7039550055637844362
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844359
+        parentNodeID: 2
+        indent: 0
+        presetName: Item Owner
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 7039550055637844465
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddHealth
+        functionDescription: Unit/Add Health
+        functionDynamicDescription: Add $ health to $
+        functionEvaluators:
+        - rid: 7039550055637844466
+        - rid: 7039550055637844467
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 7039550055637844466
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844465
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 10
+    - rid: 7039550055637844467
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844465
+        parentNodeID: 1
+        indent: 0
+        presetName: Ability Owner
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}

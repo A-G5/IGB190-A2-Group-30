@@ -1,0 +1,267 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
+  m_Name: Revitalising Band
+  m_EditorClassIdentifier: 
+  itemName: Revitalising Band
+  itemDescription: 'Extra Vitality: Gain bonus health when picking up a health globe
+
+'
+  itemTag: 
+  itemFlavourText: 
+  classRequirement: 
+  itemIcon: {fileID: 21300000, guid: 868c7767c75364f408d3ccad1813a095, type: 3}
+  itemType: 0
+  itemRarity: 2
+  itemCost: 1500
+  randomStatCount: 0
+  guaranteedStats:
+  - stat: 8
+    minimum: 0.3
+    maximum: 0.3
+    isPercent: 1
+  - stat: 5
+    minimum: 0.12
+    maximum: 0.12
+    isPercent: 1
+  randomisableStats: []
+  minimumDropLevel: 0
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
+  template: {fileID: 0}
+  engine:
+    scripts:
+    - scriptName: Item Equipped
+      scriptUID: 1897625571
+      hasWait: 0
+      eventNodes:
+      - rid: 6294958422224273414
+      - rid: 7039550055637844274
+      - rid: 7039550055637844275
+      conditionNodes:
+      - rid: 7039550055637844276
+      actionNodes:
+      - rid: 7039550055637844278
+    - scriptName: Item Unequipped
+      scriptUID: 351604934
+      hasWait: 0
+      eventNodes:
+      - rid: 6294958422224273415
+      conditionNodes: []
+      actionNodes: []
+    - scriptName: Main
+      scriptUID: 2023206619
+      hasWait: 0
+      eventNodes: []
+      conditionNodes: []
+      actionNodes: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 6294958422224273414
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptLoaded
+        functionDescription: Time/On script loaded
+        functionDynamicDescription: On script loaded
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 6294958422224273415
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptUnloaded
+        functionDescription: Time/On script unloaded
+        functionDynamicDescription: On script unloaded
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 7039550055637844274
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitIsHealed
+        functionDescription: Unit/Unit is healed
+        functionDynamicDescription: 'When a unit is healed (Presets: <color=yellow>Healed
+          Unit</color>, <color=yellow>Healing Unit</color>)'
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Healed Unit
+        - Healing Unit
+    - rid: 7039550055637844275
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnPickupHealth
+        functionDescription: Player/Player picks up a health globe
+        functionDynamicDescription: 'When the player picks up a health globe (Presets:
+          <color=yellow>Health Restored</color>)'
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Pickup
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Health Restored
+    - rid: 7039550055637844276
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: PlayerHasItemEquipped
+        functionDescription: Player/Player Has Item Equipped
+        functionDynamicDescription: Player has $ equipped
+        functionEvaluators:
+        - rid: 7039550055637844277
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 7039550055637844277
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Item
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844276
+        parentNodeID: 0
+        indent: 0
+        presetName: This Item
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 7039550055637844278
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddHealth
+        functionDescription: Unit/Add Health
+        functionDynamicDescription: Add $ health to $
+        functionEvaluators:
+        - rid: 7039550055637844279
+        - rid: 7039550055637844280
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 7039550055637844279
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844278
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 50
+    - rid: 7039550055637844280
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844278
+        parentNodeID: 1
+        indent: 0
+        presetName: Item Owner
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}

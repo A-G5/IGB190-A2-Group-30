@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Paladin's Amulet
   m_EditorClassIdentifier: 
   itemName: Paladin's Amulet
-  itemDescription: 'Paladin''s Blessing: 20% movement increase when the Paladin collection
-    is equipped'
+  itemDescription: 'Holy Radiance: Increase damage dealt by 20% for 5s when you pickup
+    a health globe
+
+
+    Paladin''s Blessing: 20% movement speed + 20% armor increase
+    when the Paladin collection is equipped'
   itemTag: 
   itemFlavourText: 
   classRequirement: 
@@ -24,9 +28,17 @@ MonoBehaviour:
   itemCost: 1500
   randomStatCount: 0
   guaranteedStats:
+  - stat: 0
+    minimum: 0.2
+    maximum: 0.2
+    isPercent: 1
+  - stat: 3
+    minimum: 0.2
+    maximum: 0.2
+    isPercent: 1
   - stat: 10
-    minimum: 0.17
-    maximum: 0.21
+    minimum: 0.07
+    maximum: 0.07
     isPercent: 0
   randomisableStats: []
   minimumDropLevel: 0
@@ -40,8 +52,11 @@ MonoBehaviour:
       hasWait: 0
       eventNodes:
       - rid: 6294958422224273416
-      conditionNodes: []
-      actionNodes: []
+      - rid: 7039550055637844433
+      conditionNodes:
+      - rid: 7039550055637844434
+      actionNodes:
+      - rid: 7039550055637844436
     - scriptName: Item Unequipped
       scriptUID: 273407296
       hasWait: 0
@@ -96,3 +111,236 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
+    - rid: 7039550055637844433
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnPickupHealth
+        functionDescription: Player/Player picks up a health globe
+        functionDynamicDescription: 'When the player picks up a health globe (Presets:
+          <color=yellow>Health Restored</color>)'
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Pickup
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Health Restored
+    - rid: 7039550055637844434
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: PlayerHasItemEquipped
+        functionDescription: Player/Player Has Item Equipped
+        functionDynamicDescription: Player has $ equipped
+        functionEvaluators:
+        - rid: 7039550055637844435
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 7039550055637844435
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Item
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844434
+        parentNodeID: 0
+        indent: 0
+        presetName: This Item
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 7039550055637844436
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: IncreaseStatPercent
+        functionDescription: Unit/Increase Stat/Increase Stat on Unit by Percent
+        functionDynamicDescription: 'Increase $ of $ by $ for $ (Buff Name: $ | Max
+          Stacks: $)'
+        functionEvaluators:
+        - rid: 7039550055637844437
+        - rid: 7039550055637844438
+        - rid: 7039550055637844439
+        - rid: 7039550055637844440
+        - rid: 7039550055637844441
+        - rid: 7039550055637844442
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 7039550055637844437
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844436
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Damage
+        options:
+        - Damage
+        - Armor
+        - Damage Taken
+        - Attack Speed
+        - Max Health
+        - Max Resource
+        - Movement Speed
+        - Cooldown Reduction
+        - Ability Cost Reduction
+        - Resource Generation
+        - Critical Chance
+        - Critical Damage
+    - rid: 7039550055637844438
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844436
+        parentNodeID: 1
+        indent: 0
+        presetName: Item Owner
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 7039550055637844439
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Percent
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844436
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: '%'
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 20
+    - rid: 7039550055637844440
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844436
+        parentNodeID: 3
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: s
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 5
+    - rid: 7039550055637844441
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844436
+        parentNodeID: 4
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Holy Radiance
+        options: []
+    - rid: 7039550055637844442
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844436
+        parentNodeID: 5
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1

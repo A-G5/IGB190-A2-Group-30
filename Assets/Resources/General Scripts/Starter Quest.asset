@@ -32,7 +32,7 @@ MonoBehaviour:
       conditionNodes:
       - rid: 2029877113753436246
       actionNodes:
-      - rid: 2029877113753436248
+      - rid: 2029877113753436466
     - scriptName: Quest Reward
       scriptUID: 1296439173
       hasWait: 0
@@ -295,71 +295,6 @@ MonoBehaviour:
         allowFunction: 1
         value: Slay the Undead
         options: []
-    - rid: 2029877113753436248
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ModifyQuestRequirementProgress2
-        functionDescription: Quests/Modify Quest Progress
-        functionDynamicDescription: Modify quest progress of $ by $
-        functionEvaluators:
-        - rid: 2029877113753436249
-        - rid: 2029877113753436250
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: QuestNew
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2029877113753436249
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Quest Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 2029877113753436248
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Slay the Undead
-        options: []
-    - rid: 2029877113753436250
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 2029877113753436248
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
     - rid: 2029877113753436253
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -446,3 +381,91 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 50
+    - rid: 2029877113753436466
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ModifySpecificQuestRequirementProgress2
+        functionDescription: Quests/Modify Requirement Progress
+        functionDynamicDescription: Modify quest progress of $ on $ by $
+        functionEvaluators:
+        - rid: 2029877113753436467
+        - rid: 2029877113753436468
+        - rid: 2029877113753436469
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877113753436467
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Requirement Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877113753436466
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Put the Dead to Rest
+        options: []
+    - rid: 2029877113753436468
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877113753436466
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Slay the Undead
+        options: []
+    - rid: 2029877113753436469
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877113753436466
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1

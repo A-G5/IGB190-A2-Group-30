@@ -24,11 +24,11 @@ MonoBehaviour:
   randomStatCount: 0
   guaranteedStats:
   - stat: 1
-    minimum: 14
+    minimum: 16
     maximum: 16
     isPercent: 0
   - stat: 4
-    minimum: 22
+    minimum: 24
     maximum: 24
     isPercent: 0
   randomisableStats: []

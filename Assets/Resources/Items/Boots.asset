@@ -24,13 +24,13 @@ MonoBehaviour:
   randomStatCount: 0
   guaranteedStats:
   - stat: 6
-    minimum: 0.1
-    maximum: 0.12
+    minimum: 0.16
+    maximum: 0.16
     isPercent: 1
-  - stat: 5
-    minimum: 10
-    maximum: 12
-    isPercent: 0
+  - stat: 7
+    minimum: 0.16
+    maximum: 0.16
+    isPercent: 1
   randomisableStats: []
   minimumDropLevel: 0
   canPurchaseInShop: 1

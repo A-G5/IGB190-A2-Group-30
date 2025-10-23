@@ -1,0 +1,214 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
+  m_Name: Gold Amulet
+  m_EditorClassIdentifier: 
+  itemName: Gold Amulet
+  itemDescription: 'Treasure Charm: Gain extra gold when defeating enemies
+
+'
+  itemTag: 
+  itemFlavourText: 
+  classRequirement: 
+  itemIcon: {fileID: 21300000, guid: 490b8ea16029aca409a0ab5c570bb96e, type: 3}
+  itemType: 1
+  itemRarity: 2
+  itemCost: 1500
+  randomStatCount: 0
+  guaranteedStats:
+  - stat: 10
+    minimum: 0.21
+    maximum: 0.21
+    isPercent: 0
+  randomisableStats: []
+  minimumDropLevel: 0
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
+  template: {fileID: 0}
+  engine:
+    scripts:
+    - scriptName: Item Equipped
+      scriptUID: 491790616
+      hasWait: 0
+      eventNodes:
+      - rid: 2474105834053304419
+      - rid: 7039550055637844443
+      conditionNodes:
+      - rid: 7039550055637844444
+      actionNodes:
+      - rid: 7039550055637844446
+    - scriptName: Item Unequipped
+      scriptUID: 1696592061
+      hasWait: 0
+      eventNodes:
+      - rid: 2474105834053304420
+      conditionNodes: []
+      actionNodes: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 2474105834053304419
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptLoaded
+        functionDescription: Time/On script loaded
+        functionDynamicDescription: On script loaded
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 2474105834053304420
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptUnloaded
+        functionDescription: Time/On script unloaded
+        functionDynamicDescription: On script unloaded
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 7039550055637844443
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitIsKilled
+        functionDescription: Unit/Unit is killed
+        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
+          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
+          Ability</color>, <color=yellow>Is Critical</color>)'
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Killed Unit
+        - Killing Unit
+        - Killing Ability
+        - Is Critical
+    - rid: 7039550055637844444
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: PlayerHasItemEquipped
+        functionDescription: Player/Player Has Item Equipped
+        functionDynamicDescription: Player has $ equipped
+        functionEvaluators:
+        - rid: 7039550055637844445
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 7039550055637844445
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Item
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844444
+        parentNodeID: 0
+        indent: 0
+        presetName: This Item
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 7039550055637844446
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddGold
+        functionDescription: Player/Add Gold
+        functionDynamicDescription: Add $ gold to the player
+        functionEvaluators:
+        - rid: 7039550055637844447
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 7039550055637844447
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844446
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 100
