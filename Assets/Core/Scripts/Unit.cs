@@ -115,8 +115,8 @@ public class Unit : Interactable
         Unit damagingUnit, IVisualCodeHandler damageSource)
     {
         float armor = stats[Stat.Armor].GetValue();
-        float constant = 80f; // Chooses your value here.
-        float scalingFactor = 1.7f; // Choose your value here
+        float constant = 50f; // Chooses your value here.
+        float scalingFactor = 1.8f; // Choose your value here
 
         // Adds a factor of randomness so players don't always deal the exact same amount of damage
         const float randomFactor = 0.05f;
