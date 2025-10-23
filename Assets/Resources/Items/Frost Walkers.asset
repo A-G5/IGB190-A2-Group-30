@@ -10,39 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Paladin's Edge
+  m_Name: Frost Walkers
   m_EditorClassIdentifier: 
-  itemName: Paladin's Edge
-  itemDescription: 'Monster Slayer: Gain 25% damage increase when fighting a boss
-
-
-    Paladin''s
-    Blessing: 20% movement speed + 20% armor increase when the Paladin collection
-    is equipped'
+  itemName: Frost Walkers
+  itemDescription: 'Swift Heals: Gain 20% movement speed increase for 4 seconds when
+    you heal'
   itemTag: 
   itemFlavourText: 
   classRequirement: 
-  itemIcon: {fileID: 21300000, guid: 5ad9fb827823973498b6278fd53029ed, type: 3}
-  itemType: 2
+  itemIcon: {fileID: 21300000, guid: 8d34117aa619ac644af2b55ee113eee0, type: 3}
+  itemType: 4
   itemRarity: 2
-  itemCost: 2000
+  itemCost: 1750
   randomStatCount: 0
   guaranteedStats:
-  - stat: 0
-    minimum: 36
-    maximum: 36
-    isPercent: 0
-  - stat: 3
-    minimum: 0.2
-    maximum: 0.2
+  - stat: 6
+    minimum: 0.3
+    maximum: 0.3
     isPercent: 1
-  - stat: 0
-    minimum: 0.2
-    maximum: 0.2
-    isPercent: 1
-  - stat: 10
-    minimum: 0.12
-    maximum: 0.12
+  - stat: 5
+    minimum: 15
+    maximum: 15
     isPercent: 0
   randomisableStats: []
   minimumDropLevel: 0
@@ -52,19 +40,20 @@ MonoBehaviour:
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 313048876
+      scriptUID: 1598527307
       hasWait: 0
       eventNodes:
-      - rid: 7039550055637844232
+      - rid: 2474105834053304413
+      - rid: 7039550055637844071
       conditionNodes:
-      - rid: 7039550055637844262
+      - rid: 7039550055637844074
       actionNodes:
-      - rid: 7039550055637844266
+      - rid: 7039550055637844076
     - scriptName: Item Unequipped
-      scriptUID: 1065851788
+      scriptUID: 407483133
       hasWait: 0
       eventNodes:
-      - rid: 6294958422224273435
+      - rid: 2474105834053304414
       conditionNodes: []
       actionNodes: []
   references:
@@ -72,7 +61,28 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 6294958422224273435
+    - rid: 2474105834053304413
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptLoaded
+        functionDescription: Time/On script loaded
+        functionDynamicDescription: On script loaded
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 2474105834053304414
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -93,16 +103,15 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 7039550055637844232
+    - rid: 7039550055637844071
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: OnUnitDamaged
-        functionDescription: Unit/Unit is damaged
-        functionDynamicDescription: 'When a unit is damaged (Presets: <color=yellow>Damaged
-          Unit</color>, <color=yellow>Damaging Unit</color>, <color=yellow>Damaging
-          Ability</color>, <color=yellow>Damage Dealt</color>, <color=yellow>Is Critical</color>)'
+        functionName: WhenUnitIsHealed
+        functionDescription: Unit/Unit is healed
+        functionDynamicDescription: 'When a unit is healed (Presets: <color=yellow>Healed
+          Unit</color>, <color=yellow>Healing Unit</color>)'
         functionEvaluators: []
         parentNode:
           rid: -2
@@ -116,23 +125,18 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets:
-        - Damaged Unit
-        - Damaging Unit
-        - Damaging Ability
-        - Damage Dealt
-        - Is Critical
-    - rid: 7039550055637844262
+        - Healed Unit
+        - Healing Unit
+    - rid: 7039550055637844074
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: UnitComparison
-        functionDescription: Comparisons/Unit Comparison
-        functionDynamicDescription: $ $ $
+        functionName: UnitIsMoving
+        functionDescription: Unit/Unit Is Moving
+        functionDynamicDescription: $ is moving
         functionEvaluators:
-        - rid: 7039550055637844263
-        - rid: 7039550055637844264
-        - rid: 7039550055637844265
+        - rid: 7039550055637844075
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -145,52 +149,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 7039550055637844263
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 7039550055637844262
-        parentNodeID: 0
-        indent: 0
-        presetName: Damaged Unit
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
-    - rid: 7039550055637844264
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 7039550055637844262
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Equal To
-        options:
-        - Equal To
-        - Not Equal To
-    - rid: 7039550055637844265
+    - rid: 7039550055637844075
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -200,18 +159,18 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 7039550055637844262
-        parentNodeID: 2
+          rid: 7039550055637844074
+        parentNodeID: 0
         indent: 0
-        presetName: Damaged Unit
+        presetName: Item Owner
         variableName: 
         stringSuffix: 
         nodeIcon: 
-        allowValue: 1
+        allowValue: 0
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
-    - rid: 7039550055637844266
+        value: {fileID: 0}
+    - rid: 7039550055637844076
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -221,12 +180,12 @@ MonoBehaviour:
         functionDynamicDescription: 'Increase $ of $ by $ for $ (Buff Name: $ | Max
           Stacks: $)'
         functionEvaluators:
-        - rid: 7039550055637844267
-        - rid: 7039550055637844268
-        - rid: 7039550055637844269
-        - rid: 7039550055637844270
-        - rid: 7039550055637844271
-        - rid: 7039550055637844272
+        - rid: 7039550055637844077
+        - rid: 7039550055637844078
+        - rid: 7039550055637844079
+        - rid: 7039550055637844080
+        - rid: 7039550055637844081
+        - rid: 7039550055637844082
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -238,7 +197,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 7039550055637844267
+    - rid: 7039550055637844077
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -248,7 +207,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 7039550055637844266
+          rid: 7039550055637844076
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -258,7 +217,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: Damage
+        value: Movement Speed
         options:
         - Damage
         - Armor
@@ -272,7 +231,7 @@ MonoBehaviour:
         - Resource Generation
         - Critical Chance
         - Critical Damage
-    - rid: 7039550055637844268
+    - rid: 7039550055637844078
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -282,7 +241,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 7039550055637844266
+          rid: 7039550055637844076
         parentNodeID: 1
         indent: 0
         presetName: Item Owner
@@ -293,7 +252,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 7039550055637844269
+    - rid: 7039550055637844079
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -303,7 +262,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 7039550055637844266
+          rid: 7039550055637844076
         parentNodeID: 2
         indent: 0
         presetName: 
@@ -313,29 +272,29 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 25
-    - rid: 7039550055637844270
+        value: 20
+    - rid: 7039550055637844080
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 4
+        returnType: 0
         tempName: 
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 7039550055637844266
+          rid: 7039550055637844076
         parentNodeID: 3
         indent: 0
-        presetName: Damage Dealt
+        presetName: 
         variableName: 
         stringSuffix: s
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
-    - rid: 7039550055637844271
+        value: 4
+    - rid: 7039550055637844081
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -345,7 +304,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 7039550055637844266
+          rid: 7039550055637844076
         parentNodeID: 4
         indent: 0
         presetName: 
@@ -355,9 +314,9 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Monster Slayer
+        value: Swift Heals
         options: []
-    - rid: 7039550055637844272
+    - rid: 7039550055637844082
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -367,7 +326,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 7039550055637844266
+          rid: 7039550055637844076
         parentNodeID: 5
         indent: 0
         presetName: 

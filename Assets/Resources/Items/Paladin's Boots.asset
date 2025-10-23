@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Paladin's Boots
   m_EditorClassIdentifier: 
   itemName: Paladin's Boots
-  itemDescription: "Paladin's Blessing: 20% movement increase when the Paladin collection
-    is equipped \n\nUnstoppable force: Gain 40% damage mitigation while moving"
+  itemDescription: 'Divine March: Gain 40% damage mitigation while moving
+
+
+    Paladin''s
+    Blessing: 20% movement speed + 20% armor increase when the Paladin collection
+    is equipped'
   itemTag: 
   itemFlavourText: 
   classRequirement: 
@@ -25,13 +29,13 @@ MonoBehaviour:
   randomStatCount: 0
   guaranteedStats:
   - stat: 6
-    minimum: 0.28
-    maximum: 0.3
+    minimum: 0.32
+    maximum: 0.32
     isPercent: 1
-  - stat: 5
-    minimum: 12
-    maximum: 15
-    isPercent: 0
+  - stat: 7
+    minimum: 0.32
+    maximum: 0.32
+    isPercent: 1
   randomisableStats: []
   minimumDropLevel: 0
   canPurchaseInShop: 1
@@ -49,6 +53,7 @@ MonoBehaviour:
       - rid: 2474106150864552012
       actionNodes:
       - rid: 2474106150864552014
+      - rid: 7039550055637844115
     - scriptName: Item Unequipped
       scriptUID: 1535663679
       hasWait: 0
@@ -291,7 +296,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Unstoppable force
+        value: Divine March
         options: []
     - rid: 2474106150864552020
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
@@ -356,3 +361,137 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
+    - rid: 7039550055637844115
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SpawnEffectOnUnit
+        functionDescription: Feedback/Play Effect on Unit
+        functionDynamicDescription: $ $ effect on $ for $ at $ scale
+        functionEvaluators:
+        - rid: 7039550055637844116
+        - rid: 7039550055637844117
+        - rid: 7039550055637844118
+        - rid: 7039550055637844119
+        - rid: 7039550055637844120
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Effect
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 7039550055637844116
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844115
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Play
+        options:
+        - Play
+        - Stop
+        - Play or Refresh
+    - rid: 7039550055637844117
+      type: {class: EffectNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Effect
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844115
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 4353791369601176701, guid: 2917d8af520ee8747814171415a53c40, type: 3}
+    - rid: 7039550055637844118
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844115
+        parentNodeID: 2
+        indent: 0
+        presetName: Item Owner
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 7039550055637844119
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844115
+        parentNodeID: 3
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: s
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 7039550055637844120
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 7039550055637844115
+        parentNodeID: 4
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: x
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.1
