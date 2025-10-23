@@ -141,7 +141,10 @@ public class Monster : Unit
         {
             StopMoving();
         }
-
+        else if (target == GameManager.player && Vector3.Distance(transform.position, GameManager.player.transform.position) > 10)
+        {
+            StopMoving();
+        }
         else if (target == null && CanMove() && GetFaction() == Faction.Player)
         {
             agentNavigation.SetDestination(GameManager.player.transform.position);
