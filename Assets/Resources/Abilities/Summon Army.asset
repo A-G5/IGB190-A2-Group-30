@@ -51,7 +51,7 @@ MonoBehaviour:
           scriptUID: 1601298869
           hasWait: 1
           eventNodes:
-          - rid: 248813056113770975
+          - rid: 2061571640537120860
           conditionNodes: []
           actionNodes:
           - rid: 2029877084855468521
@@ -66,32 +66,6 @@ MonoBehaviour:
           - rid: 248813180560080966
           - rid: 248813549377814528
           - rid: 2029877084855468524
-    - rid: 248813056113770975
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: WhenUnitFinishesCastingThisAbility
-        functionDescription: Ability/When a unit finishes casting this ability
-        functionDynamicDescription: 'When a unit finishes casting this ability (Presets:
-          <color=yellow>Casting Unit</color>, <color=yellow>Ability Target Location</color>,
-          <color=yellow>Target Unit</color>)'
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Event
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets:
-        - Casting Unit
-        - Ability Target Location
-        - Target Unit
     - rid: 248813056113770976
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -892,6 +866,32 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 2
+    - rid: 2061571640537120860
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitFinishesCastingThisAbility
+        functionDescription: Ability/When a unit finishes casting this ability
+        functionDynamicDescription: 'When a unit finishes casting this ability (Presets:
+          <color=yellow>Casting Unit</color>, <color=yellow>Ability Target Location</color>,
+          <color=yellow>Target Unit</color>)'
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Casting Unit
+        - Ability Target Location
+        - Target Unit
     - rid: 3958016566240739339
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
