@@ -4,7 +4,7 @@ using UnityEngine;
 public class PickupKey : MonoBehaviour
 {
     public GameObject key;
-    bool FoundKey = false;
+    bool foundKey = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,9 +15,9 @@ public class PickupKey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FoundKey = LogicEngine.GetGlobalVariable<bool>("FoundKey");
+        foundKey = LogicEngine.GetGlobalVariable<bool>("FoundKey");
 
-        if (FoundKey == true)
+        if (foundKey == true)
         {
             Destroy(key);
         }
