@@ -36,7 +36,7 @@ public class Monster : Unit
     [Range(0, 10)] public int spawnLikelihood = 5;
 
     private const float StopDistanceBuffer = 0.1f;
-    private const float MaximumPossibleRange = 10f;
+    private const float MaximumPossibleRange = 5f;
     private const float DamageNumberSpawnVariance = 0.3f;
     private const float ActionDelayAfterSpawning = 1.0f;
     private const float EmpoweredScaleModifier = 1.5f;

@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 498993261086472550}
+  - component: {fileID: 243147159722867909}
   - component: {fileID: 6773343702762155168}
   - component: {fileID: 1404768138306344450}
-  - component: {fileID: 243147159722867909}
   - component: {fileID: 2780831380324950161}
   m_Layer: 7
   m_Name: Boss
@@ -36,6 +36,58 @@ Transform:
   - {fileID: 3086634218803522121}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &243147159722867909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637392150435583504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a25dff70c664a840943179529e649fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
+  colorFade: {r: 0, g: 0, b: 0, a: 0}
+  unitName: Boss
+  health: 100
+  resource: 0
+  baseDamage: 30
+  baseAttacksPerSecond: 1
+  baseMaxHealth: 600
+  baseMaxResource: 100
+  baseMovementSpeed: 2
+  baseArmor: 0
+  baseCriticalStrikeChance: 0.2
+  baseCriticalStrikeDamage: 2
+  baseHealthRegen: 0
+  baseResourceRegen: 0
+  baseAttackRange: 2
+  abilities:
+  - {fileID: 11400000, guid: 7f5a643269b552c4586bd9cabd56b69e, type: 2}
+  - {fileID: 11400000, guid: 78a26e0a386159c468fb4ad26178fd34, type: 2}
+  - {fileID: 11400000, guid: 65e0066d1b2347c4097e534eb34830dd, type: 2}
+  lastAbilityCast: {fileID: 0}
+  handPoint: {fileID: 8602773439654565985}
+  onDeathFeedback: {fileID: 11400000, guid: 0256ddc6b3a273d418c5861d14162aa9, type: 2}
+  onHitFeedback: {fileID: 11400000, guid: 51eb79cf66c4e5447a2f14bf112f7d1b, type: 2}
+  target: {fileID: 0}
+  isDead: 0
+  faction: 1
+  spawnEffect: {fileID: -68291847361665647, guid: e4357c10759ce5742b540e7790443698, type: 3}
+  goldModifier: 50
+  experienceModifier: 100
+  corpseDuration: 60
+  monsterLabel: Boss
+  isStunned: 0
+  isEmpowered: 1
+  healthBarType: 1
+  uiSize: 3.6
+  uiHeight: 2
+  spawnLevel: 1
+  spawnLikelihood: 0
 --- !u!65 &6773343702762155168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79,58 +131,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &243147159722867909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8637392150435583504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a25dff70c664a840943179529e649fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outline: {fileID: 0}
-  color: {r: 0, g: 0, b: 0, a: 0}
-  colorFade: {r: 0, g: 0, b: 0, a: 0}
-  unitName: Boss
-  health: 100
-  resource: 0
-  baseDamage: 30
-  baseAttacksPerSecond: 1
-  baseMaxHealth: 600
-  baseMaxResource: 100
-  baseMovementSpeed: 2
-  baseArmor: 0
-  baseCriticalStrikeChance: 0.2
-  baseCriticalStrikeDamage: 2
-  baseHealthRegen: 0
-  baseResourceRegen: 0
-  baseAttackRange: 2
-  abilities:
-  - {fileID: 11400000, guid: 7f5a643269b552c4586bd9cabd56b69e, type: 2}
-  - {fileID: 11400000, guid: 78a26e0a386159c468fb4ad26178fd34, type: 2}
-  - {fileID: 11400000, guid: 65e0066d1b2347c4097e534eb34830dd, type: 2}
-  lastAbilityCast: {fileID: 0}
-  handPoint: {fileID: 8602773439654565985}
-  onDeathFeedback: {fileID: 11400000, guid: 0256ddc6b3a273d418c5861d14162aa9, type: 2}
-  onHitFeedback: {fileID: 11400000, guid: 51eb79cf66c4e5447a2f14bf112f7d1b, type: 2}
-  target: {fileID: 0}
-  isDead: 0
-  faction: 1
-  spawnEffect: {fileID: -68291847361665647, guid: e4357c10759ce5742b540e7790443698, type: 3}
-  goldModifier: 50
-  experienceModifier: 1
-  corpseDuration: 60
-  monsterLabel: Boss
-  isStunned: 0
-  isEmpowered: 1
-  healthBarType: 1
-  uiSize: 3.6
-  uiHeight: 2
-  spawnLevel: 1
-  spawnLikelihood: 0
 --- !u!54 &2780831380324950161
 Rigidbody:
   m_ObjectHideFlags: 0

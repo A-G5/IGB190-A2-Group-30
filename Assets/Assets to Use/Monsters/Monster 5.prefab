@@ -4909,9 +4909,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6079015316810904102}
+  - component: {fileID: 1113393009475316218}
   - component: {fileID: 7726092319894581003}
   - component: {fileID: 4483176982309478327}
-  - component: {fileID: 1113393009475316218}
   - component: {fileID: 5473502248093228870}
   - component: {fileID: 2920441891713619784}
   m_Layer: 7
@@ -4938,6 +4938,56 @@ Transform:
   - {fileID: 26728454}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1113393009475316218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5662016874593143378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a25dff70c664a840943179529e649fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
+  colorFade: {r: 0, g: 0, b: 0, a: 0}
+  unitName: Spectral Archer
+  health: 100
+  resource: 0
+  baseDamage: 5
+  baseAttacksPerSecond: 1
+  baseMaxHealth: 100
+  baseMaxResource: 100
+  baseMovementSpeed: 1.05
+  baseArmor: 0
+  baseCriticalStrikeChance: 0.08
+  baseCriticalStrikeDamage: 2
+  baseHealthRegen: 0
+  baseResourceRegen: 0
+  baseAttackRange: 2.2
+  abilities:
+  - {fileID: 11400000, guid: a754a6374a0c8674cbcc3b4c8912ec17, type: 2}
+  lastAbilityCast: {fileID: 0}
+  handPoint: {fileID: 0}
+  onDeathFeedback: {fileID: 11400000, guid: 84adead40393a4e4582f15d95dba0ac6, type: 2}
+  onHitFeedback: {fileID: 11400000, guid: 51eb79cf66c4e5447a2f14bf112f7d1b, type: 2}
+  target: {fileID: 0}
+  isDead: 0
+  faction: 1
+  spawnEffect: {fileID: -68291847361665647, guid: c0ee2f05980c4c74f922864461f883d8, type: 3}
+  goldModifier: 6
+  experienceModifier: 5
+  corpseDuration: 5
+  monsterLabel: 
+  isStunned: 0
+  isEmpowered: 0
+  healthBarType: 0
+  uiSize: 1
+  uiHeight: 1.7
+  spawnLevel: 1
+  spawnLikelihood: 10
 --- !u!65 &7726092319894581003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4981,56 +5031,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1113393009475316218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5662016874593143378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a25dff70c664a840943179529e649fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outline: {fileID: 0}
-  color: {r: 0, g: 0, b: 0, a: 0}
-  colorFade: {r: 0, g: 0, b: 0, a: 0}
-  unitName: Spectral Archer
-  health: 100
-  resource: 0
-  baseDamage: 5
-  baseAttacksPerSecond: 1
-  baseMaxHealth: 100
-  baseMaxResource: 100
-  baseMovementSpeed: 1.05
-  baseArmor: 0
-  baseCriticalStrikeChance: 0.08
-  baseCriticalStrikeDamage: 2
-  baseHealthRegen: 0
-  baseResourceRegen: 0
-  baseAttackRange: 2.2
-  abilities:
-  - {fileID: 11400000, guid: a754a6374a0c8674cbcc3b4c8912ec17, type: 2}
-  lastAbilityCast: {fileID: 0}
-  handPoint: {fileID: 0}
-  onDeathFeedback: {fileID: 11400000, guid: 84adead40393a4e4582f15d95dba0ac6, type: 2}
-  onHitFeedback: {fileID: 11400000, guid: 51eb79cf66c4e5447a2f14bf112f7d1b, type: 2}
-  target: {fileID: 0}
-  isDead: 0
-  faction: 1
-  spawnEffect: {fileID: -68291847361665647, guid: c0ee2f05980c4c74f922864461f883d8, type: 3}
-  goldModifier: 1
-  experienceModifier: 1
-  corpseDuration: 5
-  monsterLabel: 
-  isStunned: 0
-  isEmpowered: 0
-  healthBarType: 0
-  uiSize: 1
-  uiHeight: 1.7
-  spawnLevel: 1
-  spawnLikelihood: 10
 --- !u!54 &5473502248093228870
 Rigidbody:
   m_ObjectHideFlags: 0

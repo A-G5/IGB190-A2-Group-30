@@ -119,10 +119,11 @@ MonoBehaviour:
   isDead: 0
   faction: 1
   spawnEffect: {fileID: 0}
-  goldModifier: 1
-  experienceModifier: 1
+  goldModifier: 0
+  experienceModifier: 20
   corpseDuration: 0
   monsterLabel: 
+  isStunned: 0
   isEmpowered: 0
   healthBarType: 1
   uiSize: 3

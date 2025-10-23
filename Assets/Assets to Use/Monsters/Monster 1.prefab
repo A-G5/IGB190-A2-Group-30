@@ -76,8 +76,8 @@ MonoBehaviour:
   isDead: 0
   faction: 1
   spawnEffect: {fileID: 4062287519753572544, guid: 332ddaa5f7738b142ac986212c018770, type: 3}
-  goldModifier: 1
-  experienceModifier: 1
+  goldModifier: 4
+  experienceModifier: 3
   corpseDuration: 5
   monsterLabel: 
   isStunned: 0
