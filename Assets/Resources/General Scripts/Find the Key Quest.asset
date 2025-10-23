@@ -51,7 +51,8 @@ MonoBehaviour:
       eventNodes:
       - rid: 2029877113753436510
       conditionNodes: []
-      actionNodes: []
+      actionNodes:
+      - rid: 2029877120714408027
   references:
     version: 2
     RefIds:
@@ -812,6 +813,71 @@ MonoBehaviour:
         parentNode:
           rid: 2029877113753436516
         parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 2029877120714408027
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetGlobalBoolVariable
+        functionDescription: Global Variables/Set Global Bool Variable
+        functionDynamicDescription: Set global bool variable named $ to $
+        functionEvaluators:
+        - rid: 2029877120714408028
+        - rid: 2029877120714408029
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877120714408028
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408027
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: CanOpenGate1
+        options: []
+    - rid: 2029877120714408029
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Bool
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408027
+        parentNodeID: 1
         indent: 0
         presetName: 
         variableName: 
