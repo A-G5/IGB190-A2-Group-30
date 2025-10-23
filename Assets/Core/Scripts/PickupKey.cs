@@ -16,7 +16,6 @@ public class PickupKey : MonoBehaviour
     void Update()
     {
         FoundKey = LogicEngine.GetGlobalVariable<bool>("FoundKey");
-        Console.WriteLine(FoundKey);
 
         if (FoundKey == true)
         {
