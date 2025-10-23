@@ -1,0 +1,511 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76ef298ccb713614cb4f11ef9d2c39cd, type: 3}
+  m_Name: Final Town Quest
+  m_EditorClassIdentifier: 
+  engine:
+    scripts:
+    - scriptName: Quest Start
+      scriptUID: 2045974074
+      hasWait: 0
+      eventNodes:
+      - rid: 2029877120714408032
+      conditionNodes: []
+      actionNodes:
+      - rid: 2029877120714408034
+      - rid: 2029877120714408040
+      - rid: 2029877120714408044
+    - scriptName: Quest Progress
+      scriptUID: 271974849
+      hasWait: 0
+      eventNodes:
+      - rid: 2029877120714408045
+      conditionNodes:
+      - rid: 2029877120714408046
+      actionNodes:
+      - rid: 2029877120714408048
+    - scriptName: Quest Reward
+      scriptUID: 130695032
+      hasWait: 0
+      eventNodes:
+      - rid: 2029877120714408052
+      conditionNodes: []
+      actionNodes:
+      - rid: 2029877120714408054
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 2029877120714408032
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitEntersRegion
+        functionDescription: Region/Unit enters region
+        functionDynamicDescription: Unit enters region named $
+        functionEvaluators:
+        - rid: 2029877120714408033
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Region
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 2029877120714408033
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Region Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408032
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Region3
+        options: []
+    - rid: 2029877120714408034
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: CreateQuest2
+        functionDescription: Quests/Create Quest
+        functionDynamicDescription: Give the player a quest named $
+        functionEvaluators:
+        - rid: 2029877120714408035
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877120714408035
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408034
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Clear the Monsters from the Neighbourhood
+        options: []
+    - rid: 2029877120714408040
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddQuestRequirement2
+        functionDescription: Quests/Add Quest Requirement
+        functionDynamicDescription: Add $ requirement to $ with $ progress increments
+        functionEvaluators:
+        - rid: 2029877120714408041
+        - rid: 2029877120714408042
+        - rid: 2029877120714408043
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877120714408041
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Requirement
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408040
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Defeat all enemies
+        options: []
+    - rid: 2029877120714408042
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408040
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Clear the Monsters from the Neighbourhood
+        options: []
+    - rid: 2029877120714408043
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408040
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 2029877120714408044
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DisableScript
+        functionDescription: Flow/Disable This Script
+        functionDynamicDescription: Disable this script
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Cancel
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877120714408045
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitIsKilled
+        functionDescription: Unit/Unit is killed
+        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
+          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
+          Ability</color>, <color=yellow>Is Critical</color>)'
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Killed Unit
+        - Killing Unit
+        - Killing Ability
+        - Is Critical
+    - rid: 2029877120714408046
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: QuestIsActive
+        functionDescription: Quest/Quest Is Active
+        functionDynamicDescription: Quest named $ is currently active
+        functionEvaluators:
+        - rid: 2029877120714408047
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 2029877120714408047
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408046
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Clear the Monsters from the Neighbourhood
+        options: []
+    - rid: 2029877120714408048
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ModifySpecificQuestRequirementProgress2
+        functionDescription: Quests/Modify Requirement Progress
+        functionDynamicDescription: Modify quest progress of $ on $ by $
+        functionEvaluators:
+        - rid: 2029877120714408049
+        - rid: 2029877120714408050
+        - rid: 2029877120714408051
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877120714408049
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Requirement Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408048
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Defeat all enemies
+        options: []
+    - rid: 2029877120714408050
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408048
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Clear the Monsters from the Neighbourhood
+        options: []
+    - rid: 2029877120714408051
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408048
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 2029877120714408052
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnQuestCompleted
+        functionDescription: Quests/On quest completed
+        functionDynamicDescription: When the quest named $ is completed
+        functionEvaluators:
+        - rid: 2029877120714408053
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Projectile
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 2029877120714408053
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408052
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Clear the Monsters from the Neighbourhood
+        options: []
+    - rid: 2029877120714408054
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetGlobalBoolVariable
+        functionDescription: Global Variables/Set Global Bool Variable
+        functionDynamicDescription: Set global bool variable named $ to $
+        functionEvaluators:
+        - rid: 2029877120714408055
+        - rid: 2029877120714408056
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877120714408055
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408054
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: CanOpenGate2
+        options: []
+    - rid: 2029877120714408056
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Bool
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877120714408054
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
