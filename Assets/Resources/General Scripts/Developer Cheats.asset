@@ -1190,7 +1190,7 @@ MonoBehaviour:
     - rid: 3569166060009554064
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 3
+        returnType: 0
         tempName: Percent
         functionName: 
         functionDescription: 

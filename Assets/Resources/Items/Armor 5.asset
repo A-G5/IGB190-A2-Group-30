@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Armor
   m_EditorClassIdentifier: 
   itemName: Armor
-  itemDescription: 'Daunting Protection: Nearby enemies deal 30% less damage
+  itemDescription: 'Daunting Defense: Nearby enemies will deal 30% less damage
 
 '
   itemTag: 

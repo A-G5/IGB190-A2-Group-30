@@ -109,15 +109,24 @@ public class Unit : Interactable
     }
 
     /// <summary>
-    /// Apply the damage formula to this unit.
+    /// Apply the damage formula to this unit. Uses the scaled percentage-damage reduction for armor.
     /// </summary>
     protected virtual float ApplyDamageFormula(float amount, bool isCritical,
         Unit damagingUnit, IVisualCodeHandler damageSource)
     {
+        float armor = stats[Stat.Armor].GetValue();
+        float constant = 80f; // Chooses your value here.
+        float scalingFactor = 1.7f; // Choose your value here
+
+        // Adds a factor of randomness so players don't always deal the exact same amount of damage
+        const float randomFactor = 0.05f;
+        amount *= (1 + Random.Range(-randomFactor, randomFactor));
+
         // Apply damage modifiers (e.g. a -50% damage taken buff).
         amount *= GetBaseDamageTakenModifier();
 
         // Armor currently doesn't do anything? Add logic here.
+        amount = amount * (1.0f / (1.0f + Mathf.Pow(armor / constant, scalingFactor)));
 
         // Return the modified amount.
         return amount;
