@@ -148,7 +148,7 @@ MonoBehaviour:
     - rid: 7039550055637844263
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
+        returnType: 4
         tempName: Unit
         functionName: 
         functionDescription: 
@@ -193,7 +193,7 @@ MonoBehaviour:
     - rid: 7039550055637844265
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 4
+        returnType: 0
         tempName: Unit
         functionName: 
         functionDescription: 
