@@ -87,7 +87,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Region 1
+        value: NewRegion
         options: []
     - rid: 2029877113753436259
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
