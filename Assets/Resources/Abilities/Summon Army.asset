@@ -15,18 +15,19 @@ MonoBehaviour:
   engine:
     rid: 248813056113770974
   abilityName: Summon Army
+  abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: c1e3dcf9cbd4a1a4a82b01776c97e109, type: 3}
   targetMode: 4
   abilityDescription: Summon a group of monsters, and one empowered monster.
-  abilityAnimation: One Hand Slash
+  abilityAnimation: Custom3
   range: 8
-  castTime: 2
+  castTime: 4
   abilityCooldown: 60
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
   canMoveWhileCasting: 0
-  hasSpecificCastTime: 0
+  hasSpecificCastTime: 1
   cooldownIsAtackSpeed: 0
   abilityGeneratesResource: 0
   requiresLineOfSight: 1
@@ -36,6 +37,7 @@ MonoBehaviour:
   castCompleteSoundVolume: 1
   needsReminderFlash: 0
   isUnlocked: 1
+  abilityTag: 
   references:
     version: 2
     RefIds:
@@ -52,6 +54,7 @@ MonoBehaviour:
           - rid: 248813056113770975
           conditionNodes: []
           actionNodes:
+          - rid: 2029877084855468521
           - rid: 248813056113770981
           - rid: 248813056113770982
           - rid: 248813056113770976
@@ -62,6 +65,7 @@ MonoBehaviour:
           - rid: 248813549377814570
           - rid: 248813180560080966
           - rid: 248813549377814528
+          - rid: 2029877084855468524
     - rid: 248813056113770975
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -782,6 +786,112 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0.6
+    - rid: 2029877084855468521
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: StunUnit
+        functionDescription: Unit/Stun Unit
+        functionDynamicDescription: Stun $ for $
+        functionEvaluators:
+        - rid: 2029877084855468522
+        - rid: 2029877084855468523
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877084855468522
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877084855468521
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 2029877084855468523
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877084855468521
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: s
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 4
+    - rid: 2029877084855468524
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Wait
+        functionDescription: Flow/Wait
+        functionDynamicDescription: Wait for $ second(s)
+        functionEvaluators:
+        - rid: 2029877084855468525
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877084855468525
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877084855468524
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 2
     - rid: 3958016566240739339
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
