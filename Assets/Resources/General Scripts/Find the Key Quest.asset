@@ -34,7 +34,8 @@ MonoBehaviour:
       actionNodes:
       - rid: 2029877113753436453
       - rid: 2029877113753436489
-      - rid: 2029877113753436495
+      - rid: 2029877113753436512
+      - rid: 2029877113753436509
     - scriptName: Open Gate
       scriptUID: 1992823800
       hasWait: 0
@@ -43,11 +44,12 @@ MonoBehaviour:
       conditionNodes:
       - rid: 2029877113753436493
       actionNodes:
-      - rid: 2029877113753436501
+      - rid: 2029877113753436516
     - scriptName: Quest Reward
       scriptUID: 56881689
       hasWait: 0
-      eventNodes: []
+      eventNodes:
+      - rid: 2029877113753436510
       conditionNodes: []
       actionNodes: []
   references:
@@ -97,7 +99,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: NewRegion
+        value: Region1
         options: []
     - rid: 2029877113753436259
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
@@ -515,71 +517,6 @@ MonoBehaviour:
         allowFunction: 1
         value: Unlock the Gate
         options: []
-    - rid: 2029877113753436495
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ModifyQuestRequirementProgress2
-        functionDescription: Quests/Modify Quest Progress
-        functionDynamicDescription: Modify quest progress of $ by $
-        functionEvaluators:
-        - rid: 2029877113753436496
-        - rid: 2029877113753436497
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: QuestNew
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2029877113753436496
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Quest Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 2029877113753436495
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Unlock the Gate
-        options: []
-    - rid: 2029877113753436497
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 2029877113753436495
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
     - rid: 2029877113753436498
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -644,17 +581,15 @@ MonoBehaviour:
         allowFunction: 1
         value: Region2
         options: []
-    - rid: 2029877113753436501
+    - rid: 2029877113753436509
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: ModifyQuestRequirementProgress2
-        functionDescription: Quests/Modify Quest Progress
-        functionDynamicDescription: Modify quest progress of $ by $
-        functionEvaluators:
-        - rid: 2029877113753436502
-        - rid: 2029877113753436503
+        functionName: DisableScript
+        functionDescription: Flow/Disable This Script
+        functionDynamicDescription: Disable this script
+        functionEvaluators: []
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -662,11 +597,33 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: QuestNew
+        nodeIcon: Cancel
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 2029877113753436502
+    - rid: 2029877113753436510
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnQuestCompleted
+        functionDescription: Quests/On quest completed
+        functionDynamicDescription: When the quest named $ is completed
+        functionEvaluators:
+        - rid: 2029877113753436511
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Projectile
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 2029877113753436511
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -676,7 +633,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 2029877113753436501
+          rid: 2029877113753436510
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -688,7 +645,74 @@ MonoBehaviour:
         allowFunction: 1
         value: Unlock the Gate
         options: []
-    - rid: 2029877113753436503
+    - rid: 2029877113753436512
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ModifySpecificQuestRequirementProgress2
+        functionDescription: Quests/Modify Requirement Progress
+        functionDynamicDescription: Modify quest progress of $ on $ by $
+        functionEvaluators:
+        - rid: 2029877113753436513
+        - rid: 2029877113753436514
+        - rid: 2029877113753436515
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877113753436513
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Requirement Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877113753436512
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Find the Key
+        options: []
+    - rid: 2029877113753436514
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877113753436512
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Unlock the Gate
+        options: []
+    - rid: 2029877113753436515
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -698,8 +722,96 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 2029877113753436501
+          rid: 2029877113753436512
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 2029877113753436516
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ModifySpecificQuestRequirementProgress2
+        functionDescription: Quests/Modify Requirement Progress
+        functionDynamicDescription: Modify quest progress of $ on $ by $
+        functionEvaluators:
+        - rid: 2029877113753436517
+        - rid: 2029877113753436518
+        - rid: 2029877113753436519
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877113753436517
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Requirement Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877113753436516
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Open the Gate
+        options: []
+    - rid: 2029877113753436518
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877113753436516
         parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Unlock the Gate
+        options: []
+    - rid: 2029877113753436519
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877113753436516
+        parentNodeID: 2
         indent: 0
         presetName: 
         variableName: 
