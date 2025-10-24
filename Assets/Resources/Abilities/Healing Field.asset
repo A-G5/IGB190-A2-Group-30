@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ba5be5e9a4ad5d49a4183e2e4440724, type: 3}
-  m_Name: Healing Shield
+  m_Name: Healing Field
   m_EditorClassIdentifier: 
   engine:
     rid: 2029877084855468111
-  abilityName: Healing Shield
+  abilityName: Healing Field
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: 4198ff1f75a489a4780f3ec386bfb4f5, type: 3}
   targetMode: 4

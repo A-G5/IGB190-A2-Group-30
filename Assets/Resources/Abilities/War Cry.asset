@@ -15,6 +15,7 @@ MonoBehaviour:
   engine:
     rid: 4796091828011794438
   abilityName: War Cry
+  abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: fe2b8789f60c97a4aacdbab1610e4e51, type: 3}
   targetMode: 0
   abilityDescription: Increase your damage by 25% and reduces your damage taken by
@@ -37,6 +38,7 @@ MonoBehaviour:
   castCompleteSoundVolume: 1
   needsReminderFlash: 0
   isUnlocked: 1
+  abilityTag: 
   references:
     version: 2
     RefIds:
@@ -59,10 +61,10 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: Effect
         allowValue: 1
         allowPreset: 1
@@ -79,10 +81,10 @@ MonoBehaviour:
         parentNode:
           rid: 248813549377814733
         parentNodeID: 0
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
@@ -104,10 +106,10 @@ MonoBehaviour:
         parentNode:
           rid: 248813549377814733
         parentNodeID: 1
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
@@ -125,10 +127,10 @@ MonoBehaviour:
         parentNode:
           rid: 248813549377814733
         parentNodeID: 2
+        indent: 0
         presetName: Casting Unit
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: 
         allowValue: 0
         allowPreset: 1
@@ -146,10 +148,10 @@ MonoBehaviour:
         parentNode:
           rid: 248813549377814733
         parentNodeID: 3
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: s
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
@@ -167,10 +169,10 @@ MonoBehaviour:
         parentNode:
           rid: 248813549377814733
         parentNodeID: 4
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: x
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
@@ -190,10 +192,10 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: Event
         allowValue: 1
         allowPreset: 1
@@ -221,10 +223,10 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
@@ -241,10 +243,10 @@ MonoBehaviour:
         parentNode:
           rid: 2658598258988810348
         parentNodeID: 0
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 0
@@ -275,10 +277,10 @@ MonoBehaviour:
         parentNode:
           rid: 2658598258988810348
         parentNodeID: 1
+        indent: 0
         presetName: Casting Unit
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: 
         allowValue: 0
         allowPreset: 1
@@ -296,10 +298,10 @@ MonoBehaviour:
         parentNode:
           rid: 2658598258988810348
         parentNodeID: 2
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: '%'
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
@@ -317,10 +319,10 @@ MonoBehaviour:
         parentNode:
           rid: 2658598258988810348
         parentNodeID: 3
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: s
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
@@ -338,10 +340,10 @@ MonoBehaviour:
         parentNode:
           rid: 2658598258988810348
         parentNodeID: 4
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
@@ -360,10 +362,10 @@ MonoBehaviour:
         parentNode:
           rid: 2658598258988810348
         parentNodeID: 5
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
@@ -402,10 +404,10 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
@@ -422,10 +424,10 @@ MonoBehaviour:
         parentNode:
           rid: 6728881780876902453
         parentNodeID: 0
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 0
@@ -456,10 +458,10 @@ MonoBehaviour:
         parentNode:
           rid: 6728881780876902453
         parentNodeID: 1
+        indent: 0
         presetName: Casting Unit
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: 
         allowValue: 0
         allowPreset: 1
@@ -477,10 +479,10 @@ MonoBehaviour:
         parentNode:
           rid: 6728881780876902453
         parentNodeID: 2
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: '%'
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
@@ -498,10 +500,10 @@ MonoBehaviour:
         parentNode:
           rid: 6728881780876902453
         parentNodeID: 3
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: s
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
@@ -519,10 +521,10 @@ MonoBehaviour:
         parentNode:
           rid: 6728881780876902453
         parentNodeID: 4
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
@@ -541,10 +543,10 @@ MonoBehaviour:
         parentNode:
           rid: 6728881780876902453
         parentNodeID: 5
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1

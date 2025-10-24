@@ -19,7 +19,7 @@ MonoBehaviour:
   abilityIcon: {fileID: 21300000, guid: 8095cd4e844ae5d4f9ffee0df9cba6f5, type: 3}
   targetMode: 0
   abilityDescription: Spin around in a circle wildly attacking all nearby enemies
-    for 120% attack damage every second.
+    for 100% attack damage every second.
   abilityAnimation: None
   range: 8
   castTime: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 40
+        value: 100
     - rid: 248813534025351180
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:
