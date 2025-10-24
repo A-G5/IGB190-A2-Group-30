@@ -59,10 +59,10 @@ public class Monster : Unit
     /// </summary>
     protected override void Start()
     {
+        ApplyMonsterScaling();
         base.Start();
         CacheComponents();
         CalculateTargetRange();
-        ApplyMonsterScaling();
         CreateHealthBar();
         ApplySpawnDelay();
         SetInitialFacing();
