@@ -50,6 +50,46 @@ public class Player : Unit
     private const float PLAYER_ROTATION_SPEED = 5;
     private static Color OUTLINE_COLOR = new Color(0.5f, 0.5f, 1.0f, 0.03f);
 
+    // === Added for ability unlock system ===
+    // This tracks which abilities we've already announced as unlocked so we don't spam levelUpFeedback every frame.
+    private HashSet<Ability> _announcedUnlocks = new HashSet<Ability>();
+
+    // Go through each ability and lock/unlock it based on player level.
+    private void RefreshAbilityLocks()
+    {
+        for (int i = 0; i < abilities.Count; i++)
+        {
+            Ability a = abilities[i];
+            if (a == null) continue;
+
+            // Below requirement = force lock
+            if (currentLevel < a.requiredLevel)
+            {
+                a.Lock();
+                // do not remove from _announcedUnlock
+                continue;
+            }
+
+            // Meets requirement = ensure unlocked
+            if (!a.isUnlocked)
+            {
+                a.Unlock();
+
+                // first time we meet the requirement, trigger feedback + log
+                if (!_announcedUnlocks.Contains(a))
+                {
+                    _announcedUnlocks.Add(a);
+
+                    Debug.Log($"Ability Ready: {a.abilityName} is now usable!");
+                    if (levelUpFeedback != null)
+                    {
+                        levelUpFeedback.ActivateFeedback(gameObject, null, transform.position);
+                    }
+                }
+            }
+        }
+    }
+
     /// <summary>
     /// Perform initial setup.
     /// </summary>
@@ -62,6 +102,9 @@ public class Player : Unit
         SetupPlayerInventory();
         SetupEquipment();
         SetupSellSlot();
+
+        // === Added for ability unlock system ===
+        RefreshAbilityLocks();
     }
 
     /// <summary>
@@ -185,8 +228,7 @@ public class Player : Unit
     /// </summary>
     public override bool CanMove ()
     {
-        
-        if (Time.time < canMoveAt) 
+	if (Time.time < canMoveAt)
             return false;
         if (Input.GetKey(GameManager.settings.keybindings[Settings.FORCE_HOLD_KEYBIND_ID]))
             return false;
@@ -323,7 +365,13 @@ public class Player : Unit
         base.TryToCastAbilities();
         for (int i = 0; i < abilities.Count; i++)
         {
-            if (abilities[i] != null && TryingToCastAbility(abilities[i], GameManager.settings.keybindings[i]))
+            if (abilities[i] == null) continue;
+
+            // === Added for ability unlock system ===
+            if (!abilities[i].isUnlocked)
+                continue;
+
+            if (TryingToCastAbility(abilities[i], GameManager.settings.keybindings[i]))
             {
                 Vector3 pos = abilities[i].GetClosestPositionInRange(this, targetPosition);
                 CastAbility(abilities[i], target, pos);
@@ -341,7 +389,6 @@ public class Player : Unit
             !Input.GetKey(GameManager.settings.keybindings[Settings.FORCE_HOLD_KEYBIND_ID])) return false;
         return true;
     }
-    
     /// <summary>
     /// Kill this unit.
     /// </summary>
@@ -436,6 +483,9 @@ public class Player : Unit
             baseHealthRegen += bonusHealthRegenPerLevel;
             baseResourceRegen += bonusResourceRegenPerLevel;
         }
+
+        // === Added for ability unlock system ===
+        RefreshAbilityLocks();
     }
 
     /// <summary>
@@ -446,6 +496,9 @@ public class Player : Unit
         currentExperience = 0;
         currentLevel -= levelsToRemove;
         UpdateExperienceRequiredForLevel();
+
+        // === Added for ability unlock system ===
+        RefreshAbilityLocks();
     }
 
     /// <summary>
@@ -460,6 +513,9 @@ public class Player : Unit
 
         UpdateExperienceRequiredForLevel();
         GameManager.events.OnPlayerLevelUp.Invoke(this);
+
+        // === Added for ability unlock system ===
+        RefreshAbilityLocks();
     }
 
     /// <summary>
@@ -536,6 +592,9 @@ public class Player : Unit
     {
         base.OnAbilitiesUpdated();
         GameManager.ui.PlayerWindow.RedrawChacterHUD();
+
+        // === Added for ability unlock system ===
+        RefreshAbilityLocks();
     }
 
     public bool HasItemEquipped (Item item)

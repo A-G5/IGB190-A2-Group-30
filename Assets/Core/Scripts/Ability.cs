@@ -55,6 +55,11 @@ public class Ability : ScriptableObject, IVisualCodeHandler
     [DoNotSerialize] public bool needsReminderFlash = false;
     [DoNotSerialize] public bool isUnlocked = true;
 
+    // === Added for ability unlock system ===
+    // Minimum player level required to use this ability.
+    // Set this in the inspector for each ability (ex: Teleport = 2, Blizzard = 4)
+    public int requiredLevel = 1;
+
     // Effect modifiers.
     public StatModifier cooldownModifier = new StatModifier("Cooldown", 1.0f);
     public StatModifier costModifier = new StatModifier("Cost", 1.0f);
