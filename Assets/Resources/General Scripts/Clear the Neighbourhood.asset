@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76ef298ccb713614cb4f11ef9d2c39cd, type: 3}
-  m_Name: Final Town Quest
+  m_Name: Clear the Neighbourhood
   m_EditorClassIdentifier: 
   engine:
     scripts:
@@ -486,7 +486,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: CanOpenGate2
+        value: NEnemiesDefeated
         options: []
     - rid: 2029877120714408056
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
