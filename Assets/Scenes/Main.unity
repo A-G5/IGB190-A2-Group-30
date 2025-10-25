@@ -37296,7 +37296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &623941939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37348,15 +37348,15 @@ MonoBehaviour:
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Mana
   resourceMaterial: {fileID: 2100000, guid: dd6dc55119cde6f4ab2a8561e505a971, type: 2}
-  bonusDamagePerLevel: 0
-  bonusHealthPerLevel: 0
+  bonusDamagePerLevel: 6
+  bonusHealthPerLevel: 20
   bonusMovementSpeedPerLevel: 0
-  bonusResourcePerLevel: 0
-  bonusArmorPerLevel: 0
-  bonusCriticalChancePerLevel: 0
-  bonusCriticalDamagePerLevel: 0
-  bonusHealthRegenPerLevel: 0
-  bonusResourceRegenPerLevel: 0
+  bonusResourcePerLevel: 3
+  bonusArmorPerLevel: 2
+  bonusCriticalChancePerLevel: 0.01
+  bonusCriticalDamagePerLevel: 0.04
+  bonusHealthRegenPerLevel: 1
+  bonusResourceRegenPerLevel: 1
 --- !u!195 &623941940
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -60778,15 +60778,15 @@ MonoBehaviour:
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Rage
   resourceMaterial: {fileID: 2100000, guid: b8286c3806406a74eaa1c5a1ac724e39, type: 2}
-  bonusDamagePerLevel: 0
-  bonusHealthPerLevel: 0
+  bonusDamagePerLevel: 6
+  bonusHealthPerLevel: 20
   bonusMovementSpeedPerLevel: 0
-  bonusResourcePerLevel: 0
-  bonusArmorPerLevel: 0
-  bonusCriticalChancePerLevel: 0
-  bonusCriticalDamagePerLevel: 0
-  bonusHealthRegenPerLevel: 0
-  bonusResourceRegenPerLevel: 0
+  bonusResourcePerLevel: 3
+  bonusArmorPerLevel: 2
+  bonusCriticalChancePerLevel: 0.01
+  bonusCriticalDamagePerLevel: 0.04
+  bonusHealthRegenPerLevel: 1
+  bonusResourceRegenPerLevel: 1
 --- !u!195 &1043651115
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -107257,7 +107257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1806430104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107309,15 +107309,15 @@ MonoBehaviour:
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Energy
   resourceMaterial: {fileID: 2100000, guid: 53e6d10c83e73f74a984d384a27c13d4, type: 2}
-  bonusDamagePerLevel: 0
-  bonusHealthPerLevel: 0
+  bonusDamagePerLevel: 6
+  bonusHealthPerLevel: 20
   bonusMovementSpeedPerLevel: 0
-  bonusResourcePerLevel: 0
-  bonusArmorPerLevel: 0
-  bonusCriticalChancePerLevel: 0
-  bonusCriticalDamagePerLevel: 0
-  bonusHealthRegenPerLevel: 0
-  bonusResourceRegenPerLevel: 0
+  bonusResourcePerLevel: 3
+  bonusArmorPerLevel: 2
+  bonusCriticalChancePerLevel: 0.01
+  bonusCriticalDamagePerLevel: 0.04
+  bonusHealthRegenPerLevel: 1
+  bonusResourceRegenPerLevel: 1
 --- !u!195 &1806430105
 NavMeshAgent:
   m_ObjectHideFlags: 0
