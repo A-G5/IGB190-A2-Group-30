@@ -34,6 +34,7 @@ RectTransform:
   m_Children:
   - {fileID: 7348946618953881135}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -57,9 +58,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -115,6 +114,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c662bd9a9bd2a7340b5dfcad5a0e8d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settings:
+    cameraToShake: {fileID: 0}
+    shakeAmount: 0.1
+    shakeDecay: 0.5
+    colorToFlash: {r: 1, g: 0, b: 0, a: 1}
+    spriteToFlash: {fileID: 0}
+    timeToFlash: 0.1
+    flashAnimationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    cameraSettings: 0
 --- !u!1 &7348946618953881134
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,6 +160,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7348946617976184645}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
