@@ -13,16 +13,14 @@ MonoBehaviour:
   m_Name: Gold Ring 1
   m_EditorClassIdentifier: 
   itemName: Gold Ring
-  itemDescription: '
-
-'
+  itemDescription: 
   itemTag: 
   itemFlavourText: 
   classRequirement: 
   itemIcon: {fileID: 21300000, guid: 74147d83c76aa6945ae2be73712532e1, type: 3}
   itemType: 0
   itemRarity: 1
-  itemCost: 1000
+  itemCost: 750
   randomStatCount: 0
   guaranteedStats:
   - stat: 10
