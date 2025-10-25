@@ -42,7 +42,7 @@ public class Projectile : MonoBehaviour
     private IVisualCodeHandler engineHandler;
 
     // Constant properties.
-    private const float DEFAULT_LIFETIME = 10;
+    private const float DEFAULT_LIFETIME = 0.5f;
     private const float PROJECTILE_HEIGHT_SMOOTHING = 10;
 
     /// <summary>
