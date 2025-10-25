@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Gold Ring 1
+  m_Name: Gold Ring
   m_EditorClassIdentifier: 
   itemName: Gold Ring
   itemDescription: 
