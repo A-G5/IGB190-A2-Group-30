@@ -28,7 +28,7 @@ public class GoldPickup : MonoBehaviour
     public void Setup(int goldAmount)
     {
         this.goldAmount = goldAmount;
-        pickupUILabel.text = $"{goldAmount} Gold";
+        pickupUILabel.text = $"{goldAmount} Candy";
     }
 
     /// <summary>
@@ -71,7 +71,7 @@ public class GoldPickup : MonoBehaviour
         pickupFeedback?.ActivateFeedback(null, null, transform.position);
         GameManager.events.OnGoldPickedUp.Invoke(goldAmount);
         ObjectPooler.DestroyPooled(gameObject);
-        StatusMessageUI.Spawn(transform.position + Vector3.up, $"+{goldAmount} Gold", Color.yellow);
+        StatusMessageUI.Spawn(transform.position + Vector3.up, $"+{goldAmount} Candy", Color.yellow);
     }
 
     /// <summary>
