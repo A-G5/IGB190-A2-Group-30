@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -2414948586266853745}
   m_Layer: 7
   m_Name: Monster 4
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5531,3 +5531,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: {fileID: 5523019307560661939}
+  stunImmune: 0

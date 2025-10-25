@@ -253,9 +253,20 @@ public partial class VisualCodeScript
                 // A "ForEachUnitInGroup" node will repeat the child actions for each unit in the group.
                 else if (actionNodes[i].functionName == "ForEachUnitInGroup")
                 {
-                    List<Unit> unitGroup = (List<Unit>)actionNodes[i].functionEvaluators[0].Resolve(presets, engine, this);
+                    //List<Unit> unitGroup = (List<Unit>)actionNodes[i].functionEvaluators[0].Resolve(presets, engine, this);
+                    //string variableName = (string)actionNodes[i].functionEvaluators[1].Resolve(presets, engine, this);
+                    //foreach (Unit unit in unitGroup)
+                    //{
+                    //    if (unit != null)
+                    //    {
+                    //        engine.localVariables[variableName] = unit;
+                    //        await RunAllActions(presets, engine, i + 1, indent + 1);
+                    //    }
+                    //}
+
+                    UnitGroup unitGroup = (UnitGroup)actionNodes[i].functionEvaluators[0].Resolve(presets, engine, this);
                     string variableName = (string)actionNodes[i].functionEvaluators[1].Resolve(presets, engine, this);
-                    foreach (Unit unit in unitGroup)
+                    foreach (Unit unit in unitGroup.unitList)
                     {
                         if (unit != null)
                         {

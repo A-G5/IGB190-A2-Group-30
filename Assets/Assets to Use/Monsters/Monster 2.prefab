@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -2174882988543051095}
   m_Layer: 7
   m_Name: Monster 2
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -536,6 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: {fileID: 7089410253440013145}
+  stunImmune: 0
 --- !u!4 &1889840250624995130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 405068, guid: a27aaa9514020fa44bb6081abd5f14fc, type: 3}

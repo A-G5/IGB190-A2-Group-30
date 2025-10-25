@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5019195518724542446}
   m_Layer: 7
   m_Name: Monster 3
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5574,6 +5574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: {fileID: 330290348599631566}
+  stunImmune: 0
 --- !u!137 &2458428688118554331 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 13744758, guid: 77ad0facb2a27504ab8edf68c35a1346, type: 3}
