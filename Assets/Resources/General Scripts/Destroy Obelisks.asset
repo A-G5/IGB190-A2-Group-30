@@ -17,8 +17,7 @@ MonoBehaviour:
     - scriptName: Quest Start
       scriptUID: 626597245
       hasWait: 0
-      eventNodes:
-      - rid: 2061571677429170306
+      eventNodes: []
       conditionNodes: []
       actionNodes:
       - rid: 2061571677429170353
@@ -46,50 +45,6 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 2061571677429170306
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: UnitEntersRegion
-        functionDescription: Region/Unit enters region
-        functionDynamicDescription: Unit enters region named $
-        functionEvaluators:
-        - rid: 2061571677429170307
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Region
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets: []
-    - rid: 2061571677429170307
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 3
-        tempName: Region Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 2061571677429170306
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 
-        options: []
     - rid: 2061571677429170311
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
