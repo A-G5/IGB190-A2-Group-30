@@ -68,7 +68,6 @@ MonoBehaviour:
   baseAttackRange: 2.5
   abilities:
   - {fileID: 11400000, guid: a392a023d071e1542b5eceb9c0e4b2dc, type: 2}
-  - {fileID: 11400000, guid: cbbf2357a81cf204b8dadb4602904de0, type: 2}
   lastAbilityCast: {fileID: 0}
   handPoint: {fileID: 0}
   onDeathFeedback: {fileID: 11400000, guid: 84adead40393a4e4582f15d95dba0ac6, type: 2}
@@ -346,3 +345,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: {fileID: 4156121889994217623}
+  stunImmune: 1
