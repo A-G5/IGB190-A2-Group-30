@@ -131,7 +131,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Clear the Monsters from the Neighbourhood
+        value: Clear the Neighbourhood
         options: []
     - rid: 2029877120714408040
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
@@ -198,7 +198,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Clear the Monsters from the Neighbourhood
+        value: Clear the Neighbourhood
         options: []
     - rid: 2029877120714408043
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
@@ -310,7 +310,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Clear the Monsters from the Neighbourhood
+        value: Clear the Neighbourhood
         options: []
     - rid: 2029877120714408048
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
@@ -377,7 +377,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Clear the Monsters from the Neighbourhood
+        value: Clear the Neighbourhood
         options: []
     - rid: 2029877120714408051
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
@@ -442,7 +442,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Clear the Monsters from the Neighbourhood
+        value: Clear the Neighbourhood
         options: []
     - rid: 2029877120714408054
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
