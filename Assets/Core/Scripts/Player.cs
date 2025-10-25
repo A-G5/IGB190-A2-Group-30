@@ -74,18 +74,6 @@ public class Player : Unit
             if (!a.isUnlocked)
             {
                 a.Unlock();
-
-                // first time we meet the requirement, trigger feedback + log
-                if (!_announcedUnlocks.Contains(a))
-                {
-                    _announcedUnlocks.Add(a);
-
-                    Debug.Log($"Ability Ready: {a.abilityName} is now usable!");
-                    if (levelUpFeedback != null)
-                    {
-                        levelUpFeedback.ActivateFeedback(gameObject, null, transform.position);
-                    }
-                }
             }
         }
     }

@@ -49,9 +49,13 @@ public class AbilitySlotUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     /// </summary>
     private void Update()
     {
-        if (GameManager.player == null || ability == null || !ability.isUnlocked)
+        if (GameManager.player == null || ability == null)
         {
             ResetAbilitySlot();
+        }
+        else if (!ability.isUnlocked)
+        {
+            ShowLockedAbility();
         }
         else
         {
@@ -87,6 +91,7 @@ public class AbilitySlotUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         cooldownSweeper.fillAmount = 0;
         abilityIcon.enabled = false;
         reminderFlash.gameObject.SetActive(false);
+        unlockText.text = "";
     }
 
     /// <summary>
@@ -104,7 +109,34 @@ public class AbilitySlotUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         abilityIcon.color = ability.HasResources(GameManager.player) ? Color.white : new Color(0.5f, 0.1f, 0.1f);
         cooldownSweeper.fillAmount = remainingCooldown / totalCooldown;
         cooldownText.text = remainingCooldown > 0 ? Mathf.Ceil(remainingCooldown).ToString() : string.Empty;
+
+        // === Show "Unlocked" text when ability becomes available ===
+        if (unlockText != null)
+        {
+            if (unlockText.text != $"Unlocked {ability.abilityName}")
+            {
+                unlockText.text = $"Unlocked {ability.abilityName}";
+                unlockText.color = new Color(1f, 0.85f, 0.3f, 1f); // gold
+                unlockText.fontSize = 20f;
+                unlockText.alignment = TextAlignmentOptions.Center;
+            }
+        }
     }
+
+    /// <summary>
+    /// Shows locked ability icons greyed out.
+    /// </summary>
+    private void ShowLockedAbility()
+    {
+        abilityIcon.enabled = true;
+        abilityIcon.sprite = ability.abilityIcon;
+        abilityIcon.color = new Color(0.3f, 0.3f, 0.3f, 0.8f);
+        reminderFlash.gameObject.SetActive(false);
+        cooldownSweeper.fillAmount = 0;
+        cooldownText.text = "";
+        unlockText.text = "";
+    }
+
 
     /// <summary>
     /// Formats the hotkey text for display, replacing certain key names with icons or abbreviations.
