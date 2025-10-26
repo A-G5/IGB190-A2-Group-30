@@ -21,7 +21,6 @@ MonoBehaviour:
       - rid: 2029877176095473755
       conditionNodes: []
       actionNodes:
-      - rid: 2029877176095473757
       - rid: 2061571677429170353
       - rid: 2061571677429170360
       - rid: 2061571677429170364
@@ -31,7 +30,7 @@ MonoBehaviour:
       eventNodes:
       - rid: 2061571677429170311
       conditionNodes:
-      - rid: 2061571677429170312
+      - rid: 2029877176095473760
       actionNodes:
       - rid: 2061571677429170346
     - scriptName: Quest Reward
@@ -91,17 +90,17 @@ MonoBehaviour:
         allowFunction: 1
         value: RegionDungeon
         options: []
-    - rid: 2029877176095473757
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+    - rid: 2029877176095473760
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: ModifyQuestRequirementProgress2
-        functionDescription: Quests/Modify Quest Progress
-        functionDynamicDescription: Modify quest progress of $ by $
+        functionName: UnitHasTag
+        functionDescription: Unit/Unit Has Tag
+        functionDynamicDescription: $ Has Tag $
         functionEvaluators:
-        - rid: 2029877176095473758
-        - rid: 2029877176095473759
+        - rid: 2029877176095473761
+        - rid: 2029877176095473762
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -109,43 +108,43 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: QuestNew
+        nodeIcon: Condition
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 2029877176095473758
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+        value: 0
+    - rid: 2029877176095473761
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
-        tempName: Quest Name
+        returnType: 4
+        tempName: Unit
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 2029877176095473757
+          rid: 2029877176095473760
         parentNodeID: 0
         indent: 0
-        presetName: 
+        presetName: Killed Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 
-        allowValue: 1
+        allowValue: 0
         allowPreset: 1
         allowFunction: 1
-        value: Enter the Dungeon
-        options: []
-    - rid: 2029877176095473759
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+        value: {fileID: 0}
+    - rid: 2029877176095473762
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: 
+        tempName: Tag
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 2029877176095473757
+          rid: 2029877176095473760
         parentNodeID: 1
         indent: 0
         presetName: 
@@ -153,9 +152,10 @@ MonoBehaviour:
         stringSuffix: 
         nodeIcon: 
         allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Spawner
+        options: []
     - rid: 2061571677429170311
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -183,119 +183,6 @@ MonoBehaviour:
         - Killing Unit
         - Killing Ability
         - Is Critical
-    - rid: 2061571677429170312
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: UnitComparison
-        functionDescription: Comparisons/Unit Comparison
-        functionDynamicDescription: $ $ $
-        functionEvaluators:
-        - rid: 2061571677429170313
-        - rid: 2061571677429170314
-        - rid: 2061571677429170315
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 2061571677429170313
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: GetUnitVariable
-        functionDescription: Unit Variable
-        functionDynamicDescription: 'Unit: $'
-        functionEvaluators:
-        - rid: 2061571677429170345
-        parentNode:
-          rid: 2061571677429170312
-        parentNodeID: 0
-        indent: 0
-        presetName: Killed Unit
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
-    - rid: 2061571677429170314
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 2061571677429170312
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Equal To
-        options:
-        - Equal To
-        - Not Equal To
-    - rid: 2061571677429170315
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 2061571677429170312
-        parentNodeID: 2
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
-    - rid: 2061571677429170345
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 3
-        tempName: Variable Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 
-        options: []
     - rid: 2061571677429170346
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:

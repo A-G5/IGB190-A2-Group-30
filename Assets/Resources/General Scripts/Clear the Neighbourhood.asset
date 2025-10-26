@@ -51,6 +51,15 @@ MonoBehaviour:
       - rid: 2029877176095473742
       actionNodes:
       - rid: 2029877176095473744
+    - scriptName: Entered
+      scriptUID: 1111761758
+      hasWait: 0
+      eventNodes:
+      - rid: 2029877176095473763
+      conditionNodes:
+      - rid: 2029877176095473768
+      actionNodes:
+      - rid: 2029877176095473765
   references:
     version: 2
     RefIds:
@@ -693,3 +702,156 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
+    - rid: 2029877176095473763
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitEntersRegion
+        functionDescription: Region/Unit enters region
+        functionDynamicDescription: Unit enters region named $
+        functionEvaluators:
+        - rid: 2029877176095473764
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Region
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 2029877176095473764
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Region Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473763
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: RegionDungeon
+        options: []
+    - rid: 2029877176095473765
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ModifyQuestRequirementProgress2
+        functionDescription: Quests/Modify Quest Progress
+        functionDynamicDescription: Modify quest progress of $ by $
+        functionEvaluators:
+        - rid: 2029877176095473766
+        - rid: 2029877176095473767
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877176095473766
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473765
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Enter the Dungeon
+        options: []
+    - rid: 2029877176095473767
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473765
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 2029877176095473768
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: QuestIsActive
+        functionDescription: Quest/Quest Is Active
+        functionDynamicDescription: Quest named $ is currently active
+        functionEvaluators:
+        - rid: 2029877176095473769
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 2029877176095473769
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473768
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Enter the Dungeon
+        options: []
