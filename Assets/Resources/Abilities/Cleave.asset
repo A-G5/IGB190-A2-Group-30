@@ -38,6 +38,7 @@ MonoBehaviour:
   castCompleteSoundVolume: 0.1
   needsReminderFlash: 0
   isUnlocked: 1
+  requiredLevel: 1
   abilityTag: 
   references:
     version: 2
