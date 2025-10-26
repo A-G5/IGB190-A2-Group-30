@@ -57,10 +57,10 @@ MonoBehaviour:
           conditionNodes: []
           actionNodes:
           - rid: 3202135774526177508
+          - rid: 3202135774526177512
           - rid: 3202135774526177509
           - rid: 3202135774526177510
           - rid: 3202135774526177511
-          - rid: 3202135774526177512
           - rid: 3202135774526177514
           - rid: 3202135794665128738
     - rid: 3202135774526177507
@@ -585,7 +585,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 2
+        value: 1
     - rid: 3202135774526177532
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
