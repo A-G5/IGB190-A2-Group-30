@@ -28,7 +28,7 @@ MonoBehaviour:
   movementLock: 1
   animationActivationPosition: 0.389
   canMoveWhileCasting: 0
-  hasSpecificCastTime: 0
+  hasSpecificCastTime: 1
   cooldownIsAtackSpeed: 0
   abilityGeneratesResource: 0
   requiresLineOfSight: 1
