@@ -41,7 +41,7 @@ MonoBehaviour:
       conditionNodes: []
       actionNodes:
       - rid: 2029877176095473736
-      - rid: 2029877176095473738
+      - rid: 2029877176095473771
       - rid: 2029877176095473770
     - scriptName: Enter the Dungeon
       scriptUID: 1036629531
@@ -60,7 +60,16 @@ MonoBehaviour:
       conditionNodes:
       - rid: 2029877176095473768
       actionNodes:
-      - rid: 2029877176095473765
+      - rid: 2029877176095473775
+    - scriptName: Finish Quest
+      scriptUID: 1736381961
+      hasWait: 0
+      eventNodes:
+      - rid: 2029877176095473779
+      conditionNodes: []
+      actionNodes:
+      - rid: 2029877176095473781
+      - rid: 2029877176095473785
   references:
     version: 2
     RefIds:
@@ -505,50 +514,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Enter the Dungeon
-        options: []
-    - rid: 2029877176095473738
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: SendEventMessage
-        functionDescription: Flow/Send Event Message
-        functionDynamicDescription: Send event message with label $
-        functionEvaluators:
-        - rid: 2029877176095473739
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Event
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2029877176095473739
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Label
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 2029877176095473738
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: The Dungeon Awaits!
+        value: The Dungeon Awaits
         options: []
     - rid: 2029877176095473740
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
@@ -636,7 +602,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Enter the Dungeon
+        value: The Dungeon Awaits
         options: []
     - rid: 2029877176095473744
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
@@ -747,71 +713,6 @@ MonoBehaviour:
         allowFunction: 1
         value: RegionDungeon
         options: []
-    - rid: 2029877176095473765
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ModifyQuestRequirementProgress2
-        functionDescription: Quests/Modify Quest Progress
-        functionDynamicDescription: Modify quest progress of $ by $
-        functionEvaluators:
-        - rid: 2029877176095473766
-        - rid: 2029877176095473767
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: QuestNew
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2029877176095473766
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Quest Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 2029877176095473765
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Enter the Dungeon
-        options: []
-    - rid: 2029877176095473767
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 2029877176095473765
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
     - rid: 2029877176095473768
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
@@ -854,7 +755,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Enter the Dungeon
+        value: The Dungeon Awaits
         options: []
     - rid: 2029877176095473770
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
@@ -876,3 +777,307 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
+    - rid: 2029877176095473771
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddQuestRequirement2
+        functionDescription: Quests/Add Quest Requirement
+        functionDynamicDescription: Add $ requirement to $ with $ progress increments
+        functionEvaluators:
+        - rid: 2029877176095473772
+        - rid: 2029877176095473773
+        - rid: 2029877176095473774
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877176095473772
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Requirement
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473771
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Enter the Dungeon
+        options: []
+    - rid: 2029877176095473773
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473771
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: The Dungeon Awaits
+        options: []
+    - rid: 2029877176095473774
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473771
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 2029877176095473775
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ModifySpecificQuestRequirementProgress2
+        functionDescription: Quests/Modify Requirement Progress
+        functionDynamicDescription: Modify quest progress of $ on $ by $
+        functionEvaluators:
+        - rid: 2029877176095473776
+        - rid: 2029877176095473777
+        - rid: 2029877176095473778
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877176095473776
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Requirement Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473775
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Enter the Dungeon
+        options: []
+    - rid: 2029877176095473777
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473775
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: The Dungeon Awaits
+        options: []
+    - rid: 2029877176095473778
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473775
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 2029877176095473779
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnQuestCompleted
+        functionDescription: Quests/On quest completed
+        functionDynamicDescription: When the quest named $ is completed
+        functionEvaluators:
+        - rid: 2029877176095473780
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Projectile
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 2029877176095473780
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473779
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: The Dungeon Awaits
+        options: []
+    - rid: 2029877176095473781
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShakeScreen
+        functionDescription: Feedback/Shake Screen
+        functionDynamicDescription: Shake the screen with a strength of $
+        functionEvaluators:
+        - rid: 2029877176095473782
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Audio
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877176095473782
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473781
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 2029877176095473785
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddGold
+        functionDescription: Player/Add Gold
+        functionDynamicDescription: Add $ gold to the player
+        functionEvaluators:
+        - rid: 2029877176095473786
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877176095473786
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473785
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 10
