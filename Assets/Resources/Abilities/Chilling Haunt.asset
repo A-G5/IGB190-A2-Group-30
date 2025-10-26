@@ -18,7 +18,9 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: 69684982838e47c499a0bae17b8c19e1, type: 3}
   targetMode: 0
-  abilityDescription: Drink your healing potion, Instantly restores 100 health.
+  abilityDescription: Drain the life energy of your enemy. Reduces target's movement
+    speed by 20% for 10 seconds and drains 10 resource points every 0.4 seconds 4
+    times in total.
   abilityAnimation: None
   range: 999
   castTime: 0

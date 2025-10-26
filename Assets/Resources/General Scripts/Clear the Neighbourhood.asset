@@ -40,7 +40,17 @@ MonoBehaviour:
       - rid: 2029877120714408052
       conditionNodes: []
       actionNodes:
-      - rid: 2029877120714408054
+      - rid: 2029877176095473736
+      - rid: 2029877176095473738
+    - scriptName: Enter the Dungeon
+      scriptUID: 1036629531
+      hasWait: 0
+      eventNodes:
+      - rid: 2029877176095473740
+      conditionNodes:
+      - rid: 2029877176095473742
+      actionNodes:
+      - rid: 2029877176095473744
   references:
     version: 2
     RefIds:
@@ -220,7 +230,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 45
+        value: 1
     - rid: 2029877120714408044
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -444,7 +454,181 @@ MonoBehaviour:
         allowFunction: 1
         value: Clear the Neighbourhood
         options: []
-    - rid: 2029877120714408054
+    - rid: 2029877176095473736
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: CreateQuest2
+        functionDescription: Quests/Create Quest
+        functionDynamicDescription: Give the player a quest named $
+        functionEvaluators:
+        - rid: 2029877176095473737
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877176095473737
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473736
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Enter the Dungeon
+        options: []
+    - rid: 2029877176095473738
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SendEventMessage
+        functionDescription: Flow/Send Event Message
+        functionDynamicDescription: Send event message with label $
+        functionEvaluators:
+        - rid: 2029877176095473739
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2029877176095473739
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Label
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473738
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: The Dungeon Awaits!
+        options: []
+    - rid: 2029877176095473740
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitEntersRegion
+        functionDescription: Region/Unit enters region
+        functionDynamicDescription: Unit enters region named $
+        functionEvaluators:
+        - rid: 2029877176095473741
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Region
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 2029877176095473741
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Region Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473740
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Region4
+        options: []
+    - rid: 2029877176095473742
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: QuestIsActive
+        functionDescription: Quest/Quest Is Active
+        functionDynamicDescription: Quest named $ is currently active
+        functionEvaluators:
+        - rid: 2029877176095473743
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 2029877176095473743
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2029877176095473742
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Enter the Dungeon
+        options: []
+    - rid: 2029877176095473744
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -453,8 +637,8 @@ MonoBehaviour:
         functionDescription: Global Variables/Set Global Bool Variable
         functionDynamicDescription: Set global bool variable named $ to $
         functionEvaluators:
-        - rid: 2029877120714408055
-        - rid: 2029877120714408056
+        - rid: 2029877176095473745
+        - rid: 2029877176095473746
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -466,7 +650,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 2029877120714408055
+    - rid: 2029877176095473745
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -476,7 +660,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 2029877120714408054
+          rid: 2029877176095473744
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -486,9 +670,9 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: NEnemiesDefeated
+        value: CanOpenGate2
         options: []
-    - rid: 2029877120714408056
+    - rid: 2029877176095473746
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -498,7 +682,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 2029877120714408054
+          rid: 2029877176095473744
         parentNodeID: 1
         indent: 0
         presetName: 
