@@ -9765,7 +9765,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Custom Character
+  m_text: Paladin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f8f5700936f4a7b49b055763ecdd2065, type: 2}
   m_sharedMaterial: {fileID: -5745236825215515014, guid: f8f5700936f4a7b49b055763ecdd2065, type: 2}
@@ -29492,14 +29492,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Write your own  custom description here!
+  m_text: 'A knight who has been blessed with the power to protect themselves from
+    evil. Wearing heavy armor and shield giving them high defence A sword that is
+    capable of slashing through tough opponents but lacks in movement speed.
+
 
 
     <color=#88FF88>Strength</color>:
-    ???
+    High armor and health
 
 
-    <color=#FF8888>Weakness</color>: ???'
+    <color=#FF8888>Weakness</color>: Low regeneration'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f8f5700936f4a7b49b055763ecdd2065, type: 2}
   m_sharedMaterial: {fileID: -5745236825215515014, guid: f8f5700936f4a7b49b055763ecdd2065, type: 2}
