@@ -16,10 +16,10 @@ MonoBehaviour:
     rid: 2029877084855468486
   abilityName: Charge Slam
   abilityFlavourText: 
-  abilityIcon: {fileID: 21300000, guid: 27b7fa237c244a242a043f62ca829dfa, type: 3}
+  abilityIcon: {fileID: 21300000, guid: fe2b8789f60c97a4aacdbab1610e4e51, type: 3}
   targetMode: 3
   abilityDescription: Run and jump to perform a huge slam. Deals 250% damage.
-  abilityAnimation: Custom3
+  abilityAnimation: Custom2
   range: 0
   castTime: 1
   abilityCooldown: 12
