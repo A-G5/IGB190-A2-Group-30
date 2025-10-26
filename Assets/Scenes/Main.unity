@@ -93009,7 +93009,7 @@ MonoBehaviour:
   baseResourceRegen: 0
   baseAttackRange: 2.5
   abilities:
-  - {fileID: 11400000, guid: cbbf2357a81cf204b8dadb4602904de0, type: 2}
+  - {fileID: 11400000, guid: 04e1acd58d02a6d41898b5deb1b315c5, type: 2}
   - {fileID: 11400000, guid: 2f1f41c2a1067594e8376bffc6d6f7a2, type: 2}
   - {fileID: 11400000, guid: dcf06f73b05311c469df4ff76bc88947, type: 2}
   - {fileID: 11400000, guid: 2c0d2df3b515c4d47aa500f8d2a596b8, type: 2}
@@ -143572,11 +143572,11 @@ MonoBehaviour:
   baseResourceRegen: 8
   baseAttackRange: 2
   abilities:
-  - {fileID: 11400000, guid: 63a782021e0dcd343a62943c5471ba6c, type: 2}
-  - {fileID: 11400000, guid: 439a83325212fdd46bf8dc30aca6abfa, type: 2}
+  - {fileID: 11400000, guid: 04e1acd58d02a6d41898b5deb1b315c5, type: 2}
+  - {fileID: 11400000, guid: 547d2b25973c8d14da8937fd23cf8293, type: 2}
   - {fileID: 11400000, guid: 7240801a91a7bff4aa18671e21b17ec6, type: 2}
-  - {fileID: 11400000, guid: 35711275af7bab445a6a72edb86baf44, type: 2}
-  - {fileID: 11400000, guid: 3c20bc3718e7e7a408ecb6c5106105c9, type: 2}
+  - {fileID: 11400000, guid: 1f6672a447631374fa7299302a63d477, type: 2}
+  - {fileID: 11400000, guid: 65e0066d1b2347c4097e534eb34830dd, type: 2}
   lastAbilityCast: {fileID: 0}
   handPoint: {fileID: 0}
   onDeathFeedback: {fileID: 0}
