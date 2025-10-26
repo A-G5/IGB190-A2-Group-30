@@ -20,7 +20,7 @@ MonoBehaviour:
   targetMode: 4
   abilityDescription: "Throws a fireball  at the target \r                                             
     location, damaging all nearby monsters for 200% attack damage."
-  abilityAnimation: Bow Shoot
+  abilityAnimation: Magic Front Attack
   range: 8
   castTime: 0.1
   abilityCooldown: 0
@@ -34,10 +34,11 @@ MonoBehaviour:
   requiresLineOfSight: 1
   canUpdateTargetWhileCasting: 1
   castAtClosestPointInRange: 1
-  castCompleteSound: {fileID: 8300000, guid: d431758d9381dd8448702a22c11f9c01, type: 3}
+  castCompleteSound: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
   castCompleteSoundVolume: 0.3
   needsReminderFlash: 0
   isUnlocked: 1
+  requiredLevel: 1
   abilityTag: 
   references:
     version: 2
