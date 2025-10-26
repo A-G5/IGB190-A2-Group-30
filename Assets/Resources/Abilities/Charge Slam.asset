@@ -16,10 +16,10 @@ MonoBehaviour:
     rid: 2029877084855468486
   abilityName: Charge Slam
   abilityFlavourText: 
-  abilityIcon: {fileID: 21300000, guid: fe2b8789f60c97a4aacdbab1610e4e51, type: 3}
+  abilityIcon: {fileID: 21300000, guid: 27b7fa237c244a242a043f62ca829dfa, type: 3}
   targetMode: 3
   abilityDescription: Run and jump to perform a huge slam. Deals 250% damage.
-  abilityAnimation: Custom2
+  abilityAnimation: Custom3
   range: 0
   castTime: 1
   abilityCooldown: 12
@@ -33,10 +33,11 @@ MonoBehaviour:
   requiresLineOfSight: 0
   canUpdateTargetWhileCasting: 1
   castAtClosestPointInRange: 1
-  castCompleteSound: {fileID: 0}
+  castCompleteSound: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
   castCompleteSoundVolume: 1
   needsReminderFlash: 0
   isUnlocked: 1
+  requiredLevel: 1
   abilityTag: 
   references:
     version: 2
@@ -171,7 +172,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 2
+        value: 4
     - rid: 2029877084855468492
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
@@ -343,7 +344,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: {fileID: 6659511137062482523, guid: 0fac3ec123906cb44a22b74bdbcf6357, type: 3}
+        value: {fileID: 1037573986460541035, guid: 21aa26ecf6633324ea1c58f2657d2570, type: 3}
     - rid: 2029877084855468504
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
@@ -386,7 +387,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.5
+        value: 1
     - rid: 2029877084855468506
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -407,7 +408,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 2
     - rid: 2029877084855468514
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -473,7 +474,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: {fileID: 2954705732812704554, guid: 6ba2d60772481fe40acef66014f38ad8, type: 3}
+        value: {fileID: 2954705732812704554, guid: b97529a1bf6e00743b4079a552a69288, type: 3}
     - rid: 2029877084855468517
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
@@ -516,7 +517,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.5
+        value: 1
     - rid: 2029877084855468519
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -537,7 +538,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 2
     - rid: 2029877084855468520
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
