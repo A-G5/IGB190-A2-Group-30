@@ -17474,7 +17474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5c3f6f85d6217344ac472bcfb3e341d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: CustomCharacter
+  characterName: Paladin
   characterTitle: {fileID: 1734044030}
   characterHide: {fileID: 130209919}
   characterDetails: {fileID: 22820014}
