@@ -18,7 +18,7 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: fe2b8789f60c97a4aacdbab1610e4e51, type: 3}
   targetMode: 3
-  abilityDescription: Run and jump to perform a huge slam. Deals 250% damage.
+  abilityDescription: Jump to perform a huge slam. Deals 250% damage.
   abilityAnimation: Custom2
   range: 0
   castTime: 1
