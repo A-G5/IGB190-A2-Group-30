@@ -20,7 +20,7 @@ MonoBehaviour:
   targetMode: 0
   abilityDescription: Create a Shield surrounding the Caster. Increase Armor by 200%
     and Heal by 100.
-  abilityAnimation: Custom1
+  abilityAnimation: Custom4
   range: 2
   castTime: 0
   abilityCooldown: 10
