@@ -166483,7 +166483,7 @@ MonoBehaviour:
   baseResourceRegen: 3
   baseAttackRange: 2
   abilities:
-  - {fileID: 11400000, guid: 78a26e0a386159c468fb4ad26178fd34, type: 2}
+  - {fileID: 11400000, guid: 04e1acd58d02a6d41898b5deb1b315c5, type: 2}
   - {fileID: 11400000, guid: 1403fe710daabb94bb7f0781cca7876e, type: 2}
   - {fileID: 11400000, guid: dcf06f73b05311c469df4ff76bc88947, type: 2}
   - {fileID: 11400000, guid: 39c1a2de60393714eae12252dc5a51dd, type: 2}
