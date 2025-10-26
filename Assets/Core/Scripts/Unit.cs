@@ -519,11 +519,6 @@ public class Unit : Interactable
         // Trigger OnUnitDamaged event.
         GameManager.events.OnUnitDamaged.Invoke(new GameEvents.OnUnitDamagedInfo(this, amount, damagingUnit, damageSource, isCritical));
         
-        // Stealth Help
-        const float helpModifier = 1.0f;
-        const float maxDamageReduction = 0.5f;
-        float healthPerc = health / stats[Stat.MaxHealth].GetValue();
-        amount *= Mathf.Max(Mathf.Pow(healthPerc, helpModifier), 1.0f - maxDamageReduction);
     }
 
 

@@ -148,7 +148,14 @@ public class Player : Unit
     /// Logic for the player damage taken method.
     /// </summary>
     public override void TakeDamage(float amount, bool isCritical, Unit damagingUnit, IVisualCodeHandler damageSource)
+
     {
+	// Stealth Help (Minimal Assist)
+	const float helpModifier = 0.5f;
+	const float maxDamageReduction = 0.2f;
+	float healthPerc = health / stats[Stat.MaxHealth].GetValue();
+	amount *= Mathf.Max(Mathf.Pow(healthPerc, helpModifier), 1.0f - maxDamageReduction);
+
         base.TakeDamage(amount, isCritical, damagingUnit, damageSource);
     }
 
