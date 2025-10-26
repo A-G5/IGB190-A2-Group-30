@@ -143575,8 +143575,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 04e1acd58d02a6d41898b5deb1b315c5, type: 2}
   - {fileID: 11400000, guid: 547d2b25973c8d14da8937fd23cf8293, type: 2}
   - {fileID: 11400000, guid: 7240801a91a7bff4aa18671e21b17ec6, type: 2}
-  - {fileID: 11400000, guid: 1f6672a447631374fa7299302a63d477, type: 2}
   - {fileID: 11400000, guid: 1cd688264d66e184781700ff89df5261, type: 2}
+  - {fileID: 11400000, guid: 1f6672a447631374fa7299302a63d477, type: 2}
   lastAbilityCast: {fileID: 0}
   handPoint: {fileID: 0}
   onDeathFeedback: {fileID: 0}
