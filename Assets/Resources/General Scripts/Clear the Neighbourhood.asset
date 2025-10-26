@@ -42,6 +42,7 @@ MonoBehaviour:
       actionNodes:
       - rid: 2029877176095473736
       - rid: 2029877176095473738
+      - rid: 2029877176095473770
     - scriptName: Enter the Dungeon
       scriptUID: 1036629531
       hasWait: 0
@@ -239,7 +240,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 45
     - rid: 2029877120714408044
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -855,3 +856,23 @@ MonoBehaviour:
         allowFunction: 1
         value: Enter the Dungeon
         options: []
+    - rid: 2029877176095473770
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DisableScript
+        functionDescription: Flow/Disable This Script
+        functionDynamicDescription: Disable this script
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Cancel
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
