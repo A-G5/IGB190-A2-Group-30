@@ -18,9 +18,8 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: a75fb3b0b1bc21744b2c31ab6e3e83e4, type: 3}
   targetMode: 4
-  abilityDescription: Create a forcefield of healing magic. Heals the player by 20
-    health per 0.5 seconds 5 times, allowing the player to heal by 100 health points
-    in total when used.
+  abilityDescription: Create an aura circle that heals the caster 100 overtime, damage
+    decreased in aura state.
   abilityAnimation: Magic Channel
   range: 999
   castTime: 0
