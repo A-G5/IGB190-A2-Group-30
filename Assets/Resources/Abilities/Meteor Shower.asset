@@ -18,8 +18,8 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: ad4642c27ec673441b4c0f02d7b7b338, type: 3}
   targetMode: 4
-  abilityDescription: Icicles rain from the sky towards the target location, dealing
-    50% attack damage over 8 seconds and slowing enemies hit by 50%.
+  abilityDescription: Meteor comes down from the sky and hits target within the area.
+    Dealing damage and slowness by  50%.
   abilityAnimation: Magic Area Attack
   range: 15
   castTime: 0.1

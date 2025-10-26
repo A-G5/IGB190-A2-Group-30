@@ -102345,7 +102345,7 @@ MonoBehaviour:
   health: 500
   resource: 0
   baseDamage: 35
-  baseAttacksPerSecond: 2
+  baseAttacksPerSecond: 1.7
   baseMaxHealth: 300
   baseMaxResource: 100
   baseMovementSpeed: 3
@@ -143560,23 +143560,23 @@ MonoBehaviour:
   unitName: Monk
   health: 500
   resource: 0
-  baseDamage: 25
+  baseDamage: 22
   baseAttacksPerSecond: 1.5
-  baseMaxHealth: 150
+  baseMaxHealth: 220
   baseMaxResource: 200
-  baseMovementSpeed: 3
+  baseMovementSpeed: 4
   baseArmor: 0
   baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 5
+  baseHealthRegen: 8
   baseResourceRegen: 8
-  baseAttackRange: 2
+  baseAttackRange: 3
   abilities:
   - {fileID: 11400000, guid: 04e1acd58d02a6d41898b5deb1b315c5, type: 2}
   - {fileID: 11400000, guid: 547d2b25973c8d14da8937fd23cf8293, type: 2}
   - {fileID: 11400000, guid: 7240801a91a7bff4aa18671e21b17ec6, type: 2}
   - {fileID: 11400000, guid: 1f6672a447631374fa7299302a63d477, type: 2}
-  - {fileID: 11400000, guid: 65e0066d1b2347c4097e534eb34830dd, type: 2}
+  - {fileID: 11400000, guid: 1cd688264d66e184781700ff89df5261, type: 2}
   lastAbilityCast: {fileID: 0}
   handPoint: {fileID: 0}
   onDeathFeedback: {fileID: 0}
@@ -166350,7 +166350,7 @@ MonoBehaviour:
   resource: 0
   baseDamage: 30
   baseAttacksPerSecond: 1.3
-  baseMaxHealth: 200
+  baseMaxHealth: 180
   baseMaxResource: 100
   baseMovementSpeed: 5
   baseArmor: 0
